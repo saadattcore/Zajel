@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.StockManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.StockManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" />
+  <xs:complexType name="StockManagementSetupsInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockManagementSetupsInitRequestDto" nillable="true" type="tns:StockManagementSetupsInitRequestDto" />
+  <xs:complexType name="StockManagementSetupsInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DepartmentsList" nillable="true" type="q3:ArrayOfDepartments" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockCategoryList" nillable="true" type="q4:ArrayOfStockCategory" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockItemList" nillable="true" type="q5:ArrayOfStockItem" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockSubItemList" nillable="true" type="q6:ArrayOfStockSubItem" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="VendorsList" nillable="true" type="q7:ArrayOfVendor" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockManagementSetupsInitResponseDto" nillable="true" type="tns:StockManagementSetupsInitResponseDto" />
+  <xs:complexType name="AddModifyVendorRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAddMode" type="xs:boolean" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="Vendor" nillable="true" type="q9:Vendor" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyVendorRequestDto" nillable="true" type="tns:AddModifyVendorRequestDto" />
+  <xs:complexType name="AddModifyVendorResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="AddedModifiedVendor" nillable="true" type="q11:Vendor" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyVendorResponseDto" nillable="true" type="tns:AddModifyVendorResponseDto" />
+  <xs:complexType name="AddModifyStockCategoryRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAddMode" type="xs:boolean" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockCategory" nillable="true" type="q13:StockCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockCategoryRequestDto" nillable="true" type="tns:AddModifyStockCategoryRequestDto" />
+  <xs:complexType name="AddModifyStockCategoryResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="AddedModifiedStockCategory" nillable="true" type="q15:StockCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockCategoryResponseDto" nillable="true" type="tns:AddModifyStockCategoryResponseDto" />
+  <xs:complexType name="AddModifyStockItemRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAddMode" type="xs:boolean" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockItem" nillable="true" type="q17:StockItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockItemRequestDto" nillable="true" type="tns:AddModifyStockItemRequestDto" />
+  <xs:complexType name="AddModifyStockItemResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q18:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="AddedModifiedStockItem" nillable="true" type="q19:StockItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockItemResponseDto" nillable="true" type="tns:AddModifyStockItemResponseDto" />
+  <xs:complexType name="AddModifyStockSubItemRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q20:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAddMode" type="xs:boolean" />
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockSubItem" nillable="true" type="q21:StockSubItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockSubItemRequestDto" nillable="true" type="tns:AddModifyStockSubItemRequestDto" />
+  <xs:complexType name="AddModifyStockSubItemResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q22:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="AddedModifiedStockSubItem" nillable="true" type="q23:StockSubItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddModifyStockSubItemResponseDto" nillable="true" type="tns:AddModifyStockSubItemResponseDto" />
+  <xs:complexType name="StockDetailsInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q24:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchDto" nillable="true" type="tns:StockDetailsSearchRequestDto" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsInitRequestDto" nillable="true" type="tns:StockDetailsInitRequestDto" />
+  <xs:complexType name="StockDetailsSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q25:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsSearchRequestDto" nillable="true" type="tns:StockDetailsSearchRequestDto" />
+  <xs:complexType name="StockDetailsInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q26:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockItems" nillable="true" type="q27:ArrayOfStockItem" />
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockSubItems" nillable="true" type="q28:ArrayOfStockSubItem" />
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListVendors" nillable="true" type="q29:ArrayOfVendor" />
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchResponse" nillable="true" type="tns:StockDetailsSearchResponseDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsInitResponseDto" nillable="true" type="tns:StockDetailsInitResponseDto" />
+  <xs:complexType name="StockDetailsSearchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q30:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockDetails" nillable="true" type="q31:ArrayOfStockDetailsModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsSearchResponseDto" nillable="true" type="tns:StockDetailsSearchResponseDto" />
+  <xs:complexType name="StockDetailsSaveModifyRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q32:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSaveMode" type="xs:boolean" />
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockDetails" nillable="true" type="q33:StockDetailsModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsSaveModifyRequestDto" nillable="true" type="tns:StockDetailsSaveModifyRequestDto" />
+  <xs:complexType name="StockDetailsSaveModifyResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q34:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewOrderNo" nillable="true" type="xs:string" />
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockDetails" nillable="true" type="q35:StockDetailsModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsSaveModifyResponseDto" nillable="true" type="tns:StockDetailsSaveModifyResponseDto" />
+  <xs:complexType name="StockUsageInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q36:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchDto" nillable="true" type="tns:StockUsageSearchRequestDto" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageInitRequestDto" nillable="true" type="tns:StockUsageInitRequestDto" />
+  <xs:complexType name="StockUsageSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q37:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageSearchRequestDto" nillable="true" type="tns:StockUsageSearchRequestDto" />
+  <xs:complexType name="StockUsageInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q38:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockItems" nillable="true" type="q39:ArrayOfStockItem" />
+          <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockSubItems" nillable="true" type="q40:ArrayOfStockSubItem" />
+          <xs:element minOccurs="0" name="SearchResponse" nillable="true" type="tns:StockUsageSearchResponseDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageInitResponseDto" nillable="true" type="tns:StockUsageInitResponseDto" />
+  <xs:complexType name="StockUsageSearchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q41:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="ListStockUsageDetails" nillable="true" type="q42:ArrayOfStockUsageModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageSearchResponseDto" nillable="true" type="tns:StockUsageSearchResponseDto" />
+  <xs:complexType name="StockUsageSaveModifyRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q43:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSaveMode" type="xs:boolean" />
+          <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockUsed" nillable="true" type="q44:StockUsageModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageSaveModifyRequestDto" nillable="true" type="tns:StockUsageSaveModifyRequestDto" />
+  <xs:complexType name="StockUsageSaveModifyResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q45:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockUsed" nillable="true" type="q46:StockUsageModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageSaveModifyResponseDto" nillable="true" type="tns:StockUsageSaveModifyResponseDto" />
+  <xs:complexType name="StockDetailsByBarCodeRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockDetailsByBarCodeRequestDto" nillable="true" type="tns:StockDetailsByBarCodeRequestDto" />
+  <xs:complexType name="StockDetailsByBarCodeResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q47:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StockItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="StockSubItemId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsByBarCodeResponseDto" nillable="true" type="tns:StockDetailsByBarCodeResponseDto" />
+  <xs:complexType name="StockManagmentReportRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockManagmentReportRequestDto" nillable="true" type="tns:StockManagmentReportRequestDto" />
+  <xs:complexType name="StockManagementResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockItemList" nillable="true" type="q48:ArrayOfStockItem" />
+      <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" minOccurs="0" name="StockSubItemList" nillable="true" type="q49:ArrayOfStockSubItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockManagementResponseDto" nillable="true" type="tns:StockManagementResponseDto" />
+</xs:schema>

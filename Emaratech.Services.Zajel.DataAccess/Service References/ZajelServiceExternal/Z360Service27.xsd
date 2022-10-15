@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" />
+  <xs:complexType name="ArrayOfVisionPickupDoneData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionPickupDoneData" nillable="true" type="tns:VisionPickupDoneData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionPickupDoneData" nillable="true" type="tns:ArrayOfVisionPickupDoneData" />
+  <xs:complexType name="VisionPickupDoneData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q1:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address_Tele" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AirwayBillID" type="xs:long" />
+          <xs:element minOccurs="0" name="CourierName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialInst" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionPickupDoneData" nillable="true" type="tns:VisionPickupDoneData" />
+  <xs:complexType name="ArrayOfVisionTrackingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionTrackingData" nillable="true" type="tns:VisionTrackingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionTrackingData" nillable="true" type="tns:ArrayOfVisionTrackingData" />
+  <xs:complexType name="VisionTrackingData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q2:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+          <xs:element minOccurs="0" name="ApplicationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisionStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisionStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisionStatusReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisionStatusReasonID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionTrackingData" nillable="true" type="tns:VisionTrackingData" />
+  <xs:complexType name="ArrayOfVisionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionData" nillable="true" type="tns:VisionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionData" nillable="true" type="tns:ArrayOfVisionData" />
+  <xs:complexType name="VisionData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q3:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ActionStatus" type="q4:Status" />
+          <xs:element minOccurs="0" name="AirwayBillId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ApplicationID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneePostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ODRInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ServiceTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperSecondaryNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionData" nillable="true" type="tns:VisionData" />
+  <xs:complexType name="ArrayOfVisionUpdateData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionUpdateData" nillable="true" type="tns:VisionUpdateData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionUpdateData" nillable="true" type="tns:ArrayOfVisionUpdateData" />
+  <xs:complexType name="VisionUpdateData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q5:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ActionStatus" type="q6:Status" />
+          <xs:element minOccurs="0" name="AirwayBillId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ApplicationID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionUpdateData" nillable="true" type="tns:VisionUpdateData" />
+</xs:schema>

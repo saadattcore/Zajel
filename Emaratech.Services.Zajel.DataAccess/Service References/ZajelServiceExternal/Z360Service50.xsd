@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.AddressBook" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.AddressBook" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="AddressBookInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookInitRequestDto" nillable="true" type="tns:AddressBookInitRequestDto" />
+  <xs:complexType name="AddressBookInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q3:ArrayOfBranches" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q4:ArrayOfClients" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountryList" nillable="true" type="q5:ArrayOfCountries" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookInitResponseDto" nillable="true" type="tns:AddressBookInitResponseDto" />
+  <xs:complexType name="AddressBookLoadCitiesRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookLoadCitiesRequestDto" nillable="true" type="tns:AddressBookLoadCitiesRequestDto" />
+  <xs:complexType name="AddressBookLoadCitiesResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q7:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CityList" nillable="true" type="q8:ArrayOfCities" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookLoadCitiesResponseDto" nillable="true" type="tns:AddressBookLoadCitiesResponseDto" />
+  <xs:complexType name="AddressBookCreateAddressRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Organization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondaryContactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookCreateAddressRequestDto" nillable="true" type="tns:AddressBookCreateAddressRequestDto" />
+  <xs:complexType name="AddressBookCreateAddressResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookCreateAddressResponseDto" nillable="true" type="tns:AddressBookCreateAddressResponseDto" />
+  <xs:complexType name="AddressBookSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q11:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SearchString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookSearchRequestDto" nillable="true" type="tns:AddressBookSearchRequestDto" />
+  <xs:complexType name="AddressBookSearchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AddressList" nillable="true" type="q13:ArrayOfAddresses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookSearchResponseDto" nillable="true" type="tns:AddressBookSearchResponseDto" />
+  <xs:complexType name="AddressBookModifyAddressRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerAddressId" type="xs:int" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Organization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondaryContactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookModifyAddressRequestDto" nillable="true" type="tns:AddressBookModifyAddressRequestDto" />
+  <xs:complexType name="AddressBookModifyAddressResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReturnForNewAddressEntry" nillable="true" type="tns:AddressBookCreateAddressRequestDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookModifyAddressResponseDto" nillable="true" type="tns:AddressBookModifyAddressResponseDto" />
+  <xs:complexType name="SearchAndLoadAddressRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchAndLoadAddressRequestDto" nillable="true" type="tns:SearchAndLoadAddressRequestDto" />
+  <xs:complexType name="SearchAndLoadAddressResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q17:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Address" nillable="true" type="q18:Addresses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchAndLoadAddressResponseDto" nillable="true" type="tns:SearchAndLoadAddressResponseDto" />
+  <xs:complexType name="AddressBookDeleteAddressRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q19:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookDeleteAddressRequestDto" nillable="true" type="tns:AddressBookDeleteAddressRequestDto" />
+  <xs:complexType name="AddressBookDeleteAddressResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q20:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookDeleteAddressResponseDto" nillable="true" type="tns:AddressBookDeleteAddressResponseDto" />
+</xs:schema>

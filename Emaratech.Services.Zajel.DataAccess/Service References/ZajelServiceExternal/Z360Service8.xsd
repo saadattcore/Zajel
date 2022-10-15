@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ZTron" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ZTron" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ZTron" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="ViewAllocatedBookingsInitRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAllocatedBookingsInitRequestDto" nillable="true" type="tns:ViewAllocatedBookingsInitRequestDto" />
+  <xs:complexType name="ViewAllocatedBookingsInitResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ZTron" minOccurs="0" name="CouriersAllocatedBookingsList" nillable="true" type="q1:ArrayOfCouriersAllocatedBookings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAllocatedBookingsInitResponseDto" nillable="true" type="tns:ViewAllocatedBookingsInitResponseDto" />
+  <xs:complexType name="ViewAllocatedBookingsDetailsRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="CourierUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SaveLocation" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewAllocatedBookingsDetailsRequestDto" nillable="true" type="tns:ViewAllocatedBookingsDetailsRequestDto" />
+  <xs:complexType name="ViewAllocatedBookingsDetailsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewAllocatedBookingsDetailsResponseDto" nillable="true" type="tns:ViewAllocatedBookingsDetailsResponseDto" />
+  <xs:complexType name="AirwayBillAllocationsInitRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AirwayBillAllocationsInitRequestDto" nillable="true" type="tns:AirwayBillAllocationsInitRequestDto" />
+  <xs:complexType name="AirwayBillAllocationsInitResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ZTron" minOccurs="0" name="CouriersAllocatedBookingsList" nillable="true" type="q3:ArrayOfCouriersAllocatedBookings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AirwayBillAllocationsInitResponseDto" nillable="true" type="tns:AirwayBillAllocationsInitResponseDto" />
+  <xs:complexType name="AirwayBillAllocationsStatusUpdateRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+      <xs:element minOccurs="0" name="CourierUserId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CourierUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SaveLocation" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AirwayBillAllocationsStatusUpdateRequestDto" nillable="true" type="tns:AirwayBillAllocationsStatusUpdateRequestDto" />
+  <xs:complexType name="AirwayBillAllocationsStatusUpdateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AirwayBillAllocationsStatusUpdateResponseDto" nillable="true" type="tns:AirwayBillAllocationsStatusUpdateResponseDto" />
+  <xs:complexType name="ZTronStatusUpdateRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BuildingName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HouseNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="POD_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SaveLocation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="iN_DeliveredOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="iN_Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iN_NewStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iN_POD" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="iN_ReceivedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iN_Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iN_UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTronStatusUpdateRequestDto" nillable="true" type="tns:ZTronStatusUpdateRequestDto" />
+  <xs:complexType name="ZTronStatusUpdateResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OUT_RESULT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OUT_RESULTDESC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTronStatusUpdateResponseDto" nillable="true" type="tns:ZTronStatusUpdateResponseDto" />
+  <xs:complexType name="ZTronLoginInitResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourierDeviceId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Statuses" nillable="true" type="q5:ArrayOfStatuses" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="StatusesBusinessRules" nillable="true" type="q6:ArrayOfStatusesBusinessRuleCust" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTronLoginInitResponseDto" nillable="true" type="tns:ZTronLoginInitResponseDto" />
+  <xs:complexType name="ZtroneSyncItemRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListAirwayBillUpdate" nillable="true" type="tns:ArrayOfAirwayBillAllocationsStatusUpdateRequestDto" />
+      <xs:element minOccurs="0" name="ListBookingUpdate" nillable="true" type="tns:ArrayOfViewAllocatedBookingsDetailsRequestDto" />
+      <xs:element minOccurs="0" name="ListDeliverySheetUpdate" nillable="true" type="tns:ArrayOfZtronDeliverySheetUpdateDto" />
+      <xs:element minOccurs="0" name="ListStatusUpdate" nillable="true" type="tns:ArrayOfZTronStatusUpdateRequestDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZtroneSyncItemRequest" nillable="true" type="tns:ZtroneSyncItemRequest" />
+  <xs:complexType name="ArrayOfAirwayBillAllocationsStatusUpdateRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AirwayBillAllocationsStatusUpdateRequestDto" nillable="true" type="tns:AirwayBillAllocationsStatusUpdateRequestDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAirwayBillAllocationsStatusUpdateRequestDto" nillable="true" type="tns:ArrayOfAirwayBillAllocationsStatusUpdateRequestDto" />
+  <xs:complexType name="ArrayOfViewAllocatedBookingsDetailsRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewAllocatedBookingsDetailsRequestDto" nillable="true" type="tns:ViewAllocatedBookingsDetailsRequestDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewAllocatedBookingsDetailsRequestDto" nillable="true" type="tns:ArrayOfViewAllocatedBookingsDetailsRequestDto" />
+  <xs:complexType name="ArrayOfZtronDeliverySheetUpdateDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZtronDeliverySheetUpdateDto" nillable="true" type="tns:ZtronDeliverySheetUpdateDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZtronDeliverySheetUpdateDto" nillable="true" type="tns:ArrayOfZtronDeliverySheetUpdateDto" />
+  <xs:complexType name="ZtronDeliverySheetUpdateDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuildingName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliverySheetId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HouseNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:decimal" />
+      <xs:element minOccurs="0" name="POD" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaveLocation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZtronDeliverySheetUpdateDto" nillable="true" type="tns:ZtronDeliverySheetUpdateDto" />
+  <xs:complexType name="ArrayOfZTronStatusUpdateRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTronStatusUpdateRequestDto" nillable="true" type="tns:ZTronStatusUpdateRequestDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTronStatusUpdateRequestDto" nillable="true" type="tns:ArrayOfZTronStatusUpdateRequestDto" />
+  <xs:complexType name="ZtroneSyncItemresponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneralError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="list" nillable="true" type="tns:ArrayOfErrorList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZtroneSyncItemresponse" nillable="true" type="tns:ZtroneSyncItemresponse" />
+  <xs:complexType name="ArrayOfErrorList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorList" nillable="true" type="tns:ErrorList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorList" nillable="true" type="tns:ArrayOfErrorList" />
+  <xs:complexType name="ErrorList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Airway" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsrrId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorList" nillable="true" type="tns:ErrorList" />
+  <xs:complexType name="ZTronLoginRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTronLoginRequestDto" nillable="true" type="tns:ZTronLoginRequestDto" />
+  <xs:complexType name="ZTronLoginResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CourierUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTronLoginResponseDto" nillable="true" type="tns:ZTronLoginResponseDto" />
+</xs:schema>

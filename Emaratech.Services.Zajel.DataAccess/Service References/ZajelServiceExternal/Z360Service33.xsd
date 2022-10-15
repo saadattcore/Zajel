@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Tracking" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Tracking" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Tracking" />
+  <xs:complexType name="TrackingByAirwayBillRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNumber" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingByAirwayBillRequestDto" nillable="true" type="tns:TrackingByAirwayBillRequestDto" />
+  <xs:complexType name="TrackingByAirwayBillResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="statusHistory" nillable="true" type="q3:ArrayOfStatusHistory" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Tracking" minOccurs="0" name="trackbyAirwaybillModel" nillable="true" type="q4:TrackbyAirwaybillModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingByAirwayBillResponseDto" nillable="true" type="tns:TrackingByAirwayBillResponseDto" />
+  <xs:complexType name="TrackingByOtherParametersRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q5:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentRefNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerAccountId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentRefNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingByOtherParametersRequestDto" nillable="true" type="tns:TrackingByOtherParametersRequestDto" />
+  <xs:complexType name="TrackingByOtherParametersResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Tracking" minOccurs="0" name="listTrackbyAirwaybillModel" nillable="true" type="q7:ArrayOfTrackbyAirwaybillModel" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="statusHistory" nillable="true" type="q8:ArrayOfStatusHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingByOtherParametersResponseDto" nillable="true" type="tns:TrackingByOtherParametersResponseDto" />
+  <xs:complexType name="TrackingStatusHistoryResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="statusHistory" nillable="true" type="q10:ArrayOfStatusHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingStatusHistoryResponseDto" nillable="true" type="tns:TrackingStatusHistoryResponseDto" />
+  <xs:complexType name="TrackingGetUpdatesCountRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q11:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNumber" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingGetUpdatesCountRequestDto" nillable="true" type="tns:TrackingGetUpdatesCountRequestDto" />
+  <xs:complexType name="TrackingGetUpdatesCountResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ShipmentUpdatesCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingGetUpdatesCountResponseDto" nillable="true" type="tns:TrackingGetUpdatesCountResponseDto" />
+  <xs:complexType name="TrackingGetComplaintsCountRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q13:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNumber" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingGetComplaintsCountRequestDto" nillable="true" type="tns:TrackingGetComplaintsCountRequestDto" />
+  <xs:complexType name="TrackingGetComplaintsCountResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ComplaintsCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingGetComplaintsCountResponseDto" nillable="true" type="tns:TrackingGetComplaintsCountResponseDto" />
+  <xs:complexType name="TrackingStatusHistoryRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="statusHistory" nillable="true" type="q16:ArrayOfStatusHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrackingStatusHistoryRequestDto" nillable="true" type="tns:TrackingStatusHistoryRequestDto" />
+</xs:schema>

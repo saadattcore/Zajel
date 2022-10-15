@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.CalculateRate" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.CalculateRate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:complexType name="CalculateRateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreightCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ManifestDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CalculateRateRequestDto" nillable="true" type="tns:CalculateRateRequestDto" />
+  <xs:complexType name="CalculateRateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CalculateRateResponseDto" nillable="true" type="tns:CalculateRateResponseDto" />
+</xs:schema>

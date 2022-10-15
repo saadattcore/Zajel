@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ShipmentTasks" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ShipmentTasks" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd49" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ShipmentTasks" />
+  <xs:complexType name="ShipmentTasksInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentTasksInitRequestDto" nillable="true" type="tns:ShipmentTasksInitRequestDto" />
+  <xs:complexType name="ShipmentTasksInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="UpdateActions" nillable="true" type="q3:ArrayOfShipmentUpdateActions" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="UpdateSubActions" nillable="true" type="q4:ArrayOfShipmentUpdateSubActions" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentTasksInitResponseDto" nillable="true" type="tns:ShipmentTasksInitResponseDto" />
+  <xs:complexType name="ShipmentUpdatesAddUpdateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q5:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionTaken" type="xs:int" />
+          <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+          <xs:element minOccurs="0" name="AttenderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CallerContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CallerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesAddUpdateRequestDto" nillable="true" type="tns:ShipmentUpdatesAddUpdateRequestDto" />
+  <xs:complexType name="ShipmentUpdatesAddUpdateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ShipmentUpdates" nillable="true" type="q7:ArrayOfShipmentUpdates" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesAddUpdateResponseDto" nillable="true" type="tns:ShipmentUpdatesAddUpdateResponseDto" />
+  <xs:complexType name="ShipmentUpdatesGetUpdatesRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesGetUpdatesRequestDto" nillable="true" type="tns:ShipmentUpdatesGetUpdatesRequestDto" />
+  <xs:complexType name="ShipmentUpdatesGetUpdatesResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ShipmentUpdates" nillable="true" type="q10:ArrayOfShipmentUpdates" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesGetUpdatesResponseDto" nillable="true" type="tns:ShipmentUpdatesGetUpdatesResponseDto" />
+  <xs:complexType name="ShipmentUpdatesGetComplaintsRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q11:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesGetComplaintsRequestDto" nillable="true" type="tns:ShipmentUpdatesGetComplaintsRequestDto" />
+  <xs:complexType name="ShipmentUpdatesGetComplaintsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ShipmentComplaints" nillable="true" type="q13:ArrayOfComplaintsByNumber" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentUpdatesGetComplaintsResponseDto" nillable="true" type="tns:ShipmentUpdatesGetComplaintsResponseDto" />
+  <xs:complexType name="ShipmentAddressUpdatesNotificationRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentAddressUpdatesNotificationRequestDto" nillable="true" type="tns:ShipmentAddressUpdatesNotificationRequestDto" />
+  <xs:complexType name="ShipmentAddressUpdatesNotificationResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ShipmentTasks" minOccurs="0" name="ShipmentAddressUpdates" nillable="true" type="q16:ArrayOfShipmentTasksAddressNotificationModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShipmentAddressUpdatesNotificationResponseDto" nillable="true" type="tns:ShipmentAddressUpdatesNotificationResponseDto" />
+</xs:schema>

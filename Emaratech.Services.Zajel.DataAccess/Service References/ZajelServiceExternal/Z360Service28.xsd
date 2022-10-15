@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Vision" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Vision" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" />
+  <xs:complexType name="VisionInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionInitRequestDto" nillable="true" type="tns:VisionInitRequestDto" />
+  <xs:complexType name="VisionInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="VisionAirwayBills" nillable="true" type="q3:ArrayOfAirwayBillData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionInitResponseDto" nillable="true" type="tns:VisionInitResponseDto" />
+  <xs:complexType name="VisionPickupRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionPickupRequestDto" nillable="true" type="tns:VisionPickupRequestDto" />
+  <xs:complexType name="VisionPickupDoneResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q5:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="VisionPickupDoneData" nillable="true" type="q6:ArrayOfVisionPickupDoneData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionPickupDoneResponseDto" nillable="true" type="tns:VisionPickupDoneResponseDto" />
+  <xs:complexType name="VisionTrackingRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q7:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchId" type="xs:long" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SeriesEnd" type="xs:long" />
+          <xs:element minOccurs="0" name="SeriesStart" type="xs:long" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TrackingType" type="tns:VisionTrackingType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionTrackingRequestDto" nillable="true" type="tns:VisionTrackingRequestDto" />
+  <xs:simpleType name="VisionTrackingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BatchNumberWise" />
+      <xs:enumeration value="DateWise" />
+      <xs:enumeration value="AirwaybillSeriesWise" />
+      <xs:enumeration value="ApplicationSeriesWise" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VisionTrackingType" nillable="true" type="tns:VisionTrackingType" />
+  <xs:complexType name="VisionTrackingResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="TrackingResults" nillable="true" type="q9:ArrayOfVisionTrackingData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionTrackingResponseDto" nillable="true" type="tns:VisionTrackingResponseDto" />
+  <xs:complexType name="VisionBulkManifestRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="VisionApplications" nillable="true" type="q11:ArrayOfVisionData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionBulkManifestRequestDto" nillable="true" type="tns:VisionBulkManifestRequestDto" />
+  <xs:complexType name="VisionBulkManifestResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="VisionApplications" nillable="true" type="q13:ArrayOfVisionData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionBulkManifestResponseDto" nillable="true" type="tns:VisionBulkManifestResponseDto" />
+  <xs:complexType name="VisionVerifyApplicationIdsRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="VisionApplications" nillable="true" type="q15:ArrayOfVisionData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionVerifyApplicationIdsRequestDto" nillable="true" type="tns:VisionVerifyApplicationIdsRequestDto" />
+  <xs:complexType name="VisionVerifyApplicationIdsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="VisionApplications" nillable="true" type="q17:ArrayOfVisionData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionVerifyApplicationIdsResponseDto" nillable="true" type="tns:VisionVerifyApplicationIdsResponseDto" />
+  <xs:complexType name="VisionApplicationUpdateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q18:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="ApplicationUpdates" nillable="true" type="q19:ArrayOfVisionUpdateData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionApplicationUpdateRequestDto" nillable="true" type="tns:VisionApplicationUpdateRequestDto" />
+  <xs:complexType name="VisionApplicationUpdateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q20:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.Model.VISION" minOccurs="0" name="ApplicationUpdates" nillable="true" type="q21:ArrayOfVisionUpdateData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionApplicationUpdateResponseDto" nillable="true" type="tns:VisionApplicationUpdateResponseDto" />
+  <xs:complexType name="AutoAllocationInitRequestDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="AutoAllocationInitRequestDto" nillable="true" type="tns:AutoAllocationInitRequestDto" />
+  <xs:complexType name="AutoAllocationInitResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Branches" nillable="true" type="q22:ArrayOfBranches" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Clients" nillable="true" type="q23:ArrayOfClients" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutoAllocationInitResponseDto" nillable="true" type="tns:AutoAllocationInitResponseDto" />
+  <xs:complexType name="VisionRequestDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q24:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClintID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="visionDataRequestDTO" nillable="true" type="tns:ArrayOfVisionDataRequestDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionRequestDTO" nillable="true" type="tns:VisionRequestDTO" />
+  <xs:complexType name="ArrayOfVisionDataRequestDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionDataRequestDTO" nillable="true" type="tns:VisionDataRequestDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionDataRequestDTO" nillable="true" type="tns:ArrayOfVisionDataRequestDTO" />
+  <xs:complexType name="VisionDataRequestDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LandLineNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODRStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POBOX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" type="xs:int" />
+      <xs:element minOccurs="0" name="SponcerName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VisionDataRequestDTO" nillable="true" type="tns:VisionDataRequestDTO" />
+  <xs:complexType name="VisionResponceDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q25:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VisionDataResponceDTO" nillable="true" type="tns:ArrayOfVisionDataResponceDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisionResponceDTO" nillable="true" type="tns:VisionResponceDTO" />
+  <xs:complexType name="ArrayOfVisionDataResponceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisionDataResponceDTO" nillable="true" type="tns:VisionDataResponceDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisionDataResponceDTO" nillable="true" type="tns:ArrayOfVisionDataResponceDTO" />
+  <xs:complexType name="VisionDataResponceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VisionDataResponceDTO" nillable="true" type="tns:VisionDataResponceDTO" />
+</xs:schema>

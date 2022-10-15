@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZajelContextExt.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nchar" MaxLength="32" Nullable="false" />
+          <Property Name="ZAJELINTEGRATION_ID" Type="nchar" MaxLength="32" Nullable="false" />
+          <Property Name="ZAJEL_STATUS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+        </EntityType>
+        <EntityType Name="ZAJELINTEGRATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nchar" MaxLength="32" Nullable="false" />
+          <Property Name="SYSTEM_KEY" Type="nchar" MaxLength="32" Nullable="false" />
+          <Property Name="APPLICATION_ID" Type="nvarchar2" MaxLength="1000" Nullable="false" />
+          <Property Name="CONTACTNO" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LANDLINENO" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SPONSORNAME" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="AREA" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="ADDRESS" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="POBOX" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ODRSTATUS" Type="nvarchar2" MaxLength="2" />
+          <Property Name="DELIVERYMODE" Type="number" Precision="38" Scale="0" />
+          <Property Name="APPLICATIONTYPE" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="FILENO" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="PRODUCTTYPE" Type="number" Precision="38" Scale="0" />
+          <Property Name="AIRWAYBILLID" Type="nvarchar2" MaxLength="50" />
+          <Property Name="RESPONSECURRENTSTATUS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="RESPONSEDESCRIPTION" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="RESPONSERESULT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CREATED" Type="timestamp" Precision="6" />
+          <Property Name="LASTMODIFIED" Type="timestamp" Precision="6" />
+        </EntityType>
+        <Association Name="FK_ZAJELINTEGRATION">
+          <End Role="ZAJELINTEGRATION" Type="Self.ZAJELINTEGRATION" Multiplicity="1" />
+          <End Role="STATUS" Type="Self.STATUS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZAJELINTEGRATION">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STATUS">
+              <PropertyRef Name="ZAJELINTEGRATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ZajelContextExtStoreContainer">
+          <EntitySet Name="STATUS" EntityType="Self.STATUS" Schema="ECORE_ZAJEL" store:Type="Tables" />
+          <EntitySet Name="ZAJELINTEGRATION" EntityType="Self.ZAJELINTEGRATION" Schema="ECORE_ZAJEL" store:Type="Tables" />
+          <AssociationSet Name="FK_ZAJELINTEGRATION" Association="Self.FK_ZAJELINTEGRATION">
+            <End Role="ZAJELINTEGRATION" EntitySet="ZAJELINTEGRATION" />
+            <End Role="STATUS" EntitySet="STATUS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZajelContextExt" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ZAJELINTEGRATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SYSTEM_KEY" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="APPLICATION_ID" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CONTACTNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LANDLINENO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SPONSORNAME" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AREA" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="POBOX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ODRSTATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="DELIVERYMODE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="APPLICATIONTYPE" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="FILENO" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTTYPE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="AIRWAYBILLID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RESPONSECURRENTSTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RESPONSEDESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="RESPONSERESULT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CREATED" Type="DateTime" Precision="6" />
+          <Property Name="LASTMODIFIED" Type="DateTime" Precision="6" />
+          <NavigationProperty Name="STATUS" Relationship="ZajelContextExt.FK_ZAJELINTEGRATION" FromRole="ZAJELINTEGRATION" ToRole="STATUS" />
+        </EntityType>
+        <EntityContainer Name="ZajelContextUpd" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ZAJELINTEGRATIONs" EntityType="Self.ZAJELINTEGRATION" />
+          <EntitySet Name="STATUS" EntityType="ZajelContextExt.STATUS" />
+          <AssociationSet Name="FK_ZAJELINTEGRATION" Association="ZajelContextExt.FK_ZAJELINTEGRATION">
+            <End Role="ZAJELINTEGRATION" EntitySet="ZAJELINTEGRATIONs" />
+            <End Role="STATUS" EntitySet="STATUS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="ZAJELINTEGRATION_ID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+          <Property Name="ZAJEL_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <NavigationProperty Name="ZAJELINTEGRATION" Relationship="ZajelContextExt.FK_ZAJELINTEGRATION" FromRole="STATUS" ToRole="ZAJELINTEGRATION" />
+        </EntityType>
+        <Association Name="FK_ZAJELINTEGRATION">
+          <End Type="ZajelContextExt.ZAJELINTEGRATION" Role="ZAJELINTEGRATION" Multiplicity="1" />
+          <End Type="ZajelContextExt.STATUS" Role="STATUS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZAJELINTEGRATION">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STATUS">
+              <PropertyRef Name="ZAJELINTEGRATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZajelContextExtStoreContainer" CdmEntityContainer="ZajelContextUpd">
+          <EntitySetMapping Name="ZAJELINTEGRATIONs">
+            <EntityTypeMapping TypeName="ZajelContextExt.ZAJELINTEGRATION">
+              <MappingFragment StoreEntitySet="ZAJELINTEGRATION">
+                <ScalarProperty Name="LASTMODIFIED" ColumnName="LASTMODIFIED" />
+                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SYSTEM_KEY" ColumnName="SYSTEM_KEY" />
+                <ScalarProperty Name="APPLICATION_ID" ColumnName="APPLICATION_ID" />
+                <ScalarProperty Name="CONTACTNO" ColumnName="CONTACTNO" />
+                <ScalarProperty Name="LANDLINENO" ColumnName="LANDLINENO" />
+                <ScalarProperty Name="SPONSORNAME" ColumnName="SPONSORNAME" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="POBOX" ColumnName="POBOX" />
+                <ScalarProperty Name="ODRSTATUS" ColumnName="ODRSTATUS" />
+                <ScalarProperty Name="DELIVERYMODE" ColumnName="DELIVERYMODE" />
+                <ScalarProperty Name="APPLICATIONTYPE" ColumnName="APPLICATIONTYPE" />
+                <ScalarProperty Name="FILENO" ColumnName="FILENO" />
+                <ScalarProperty Name="PRODUCTTYPE" ColumnName="PRODUCTTYPE" />
+                <ScalarProperty Name="AIRWAYBILLID" ColumnName="AIRWAYBILLID" />
+                <ScalarProperty Name="RESPONSECURRENTSTATUS" ColumnName="RESPONSECURRENTSTATUS" />
+                <ScalarProperty Name="RESPONSEDESCRIPTION" ColumnName="RESPONSEDESCRIPTION" />
+                <ScalarProperty Name="RESPONSERESULT" ColumnName="RESPONSERESULT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATUS">
+            <EntityTypeMapping TypeName="ZajelContextExt.STATUS">
+              <MappingFragment StoreEntitySet="STATUS">
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="ZAJEL_STATUS" ColumnName="ZAJEL_STATUS" />
+                <ScalarProperty Name="ZAJELINTEGRATION_ID" ColumnName="ZAJELINTEGRATION_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

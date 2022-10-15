@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.DeliverySheets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.DeliverySheets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DeliverySheetsInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsInitRequestDto" nillable="true" type="tns:DeliverySheetsInitRequestDto" />
+  <xs:complexType name="DeliverySheetsInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q3:ArrayOfCouriers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsInitResponseDto" nillable="true" type="tns:DeliverySheetsInitResponseDto" />
+  <xs:complexType name="DeliverySheetsCreateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AirwayBillId" nillable="true" type="q5:ArrayOflong" />
+          <xs:element minOccurs="0" name="Courier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RouteId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsCreateRequestDto" nillable="true" type="tns:DeliverySheetsCreateRequestDto" />
+  <xs:complexType name="DeliverySheetsCreateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeliverySheetId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsCreateResponseDto" nillable="true" type="tns:DeliverySheetsCreateResponseDto" />
+  <xs:complexType name="DeliverySheetsGetManifestRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q7:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsGetManifestRequestDto" nillable="true" type="tns:DeliverySheetsGetManifestRequestDto" />
+  <xs:complexType name="DeliverySheetsGetManifestResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ManifestDeliverySheet" nillable="true" type="q9:DeliverySheetAirwayBills" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsGetManifestResponseDto" nillable="true" type="tns:DeliverySheetsGetManifestResponseDto" />
+  <xs:complexType name="DeliverySheetsSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeliverySheetId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsSearchRequestDto" nillable="true" type="tns:DeliverySheetsSearchRequestDto" />
+  <xs:complexType name="DeliverySheetsSearchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q11:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Courier" nillable="true" type="xs:string" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ManifestDeliverySheetRecords" nillable="true" type="q12:ArrayOfDeliverySheetAirwayBills" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsSearchResponseDto" nillable="true" type="tns:DeliverySheetsSearchResponseDto" />
+  <xs:complexType name="DeliverySheetsUpdateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q13:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Courier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliverySheetId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsUpdateRequestDto" nillable="true" type="tns:DeliverySheetsUpdateRequestDto" />
+  <xs:complexType name="DeliverySheetsUpdateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsUpdateResponseDto" nillable="true" type="tns:DeliverySheetsUpdateResponseDto" />
+  <xs:complexType name="DeliverySheetsByCourierRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsByCourierRequestDto" nillable="true" type="tns:DeliverySheetsByCourierRequestDto" />
+  <xs:complexType name="DeliverySheetsByCourierResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliverySheetList" nillable="true" type="q17:ArrayOfDeliverySheets" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliverySheetsByCourierResponseDto" nillable="true" type="tns:DeliverySheetsByCourierResponseDto" />
+</xs:schema>

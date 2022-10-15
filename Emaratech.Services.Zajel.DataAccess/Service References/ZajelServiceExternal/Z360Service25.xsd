@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Manifest" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Manifest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" />
+  <xs:complexType name="GetAirwayBillDataByDateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocHeading" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAirwayBillDataByDateRequestDto" nillable="true" type="tns:GetAirwayBillDataByDateRequestDto" />
+  <xs:complexType name="GetAirwayBillDataByDateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AirwayBillsData" nillable="true" type="q3:ArrayOfAirwayBillData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAirwayBillDataByDateResponseDto" nillable="true" type="tns:GetAirwayBillDataByDateResponseDto" />
+  <xs:complexType name="ManifestAllocationInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestAllocationInitRequestDto" nillable="true" type="tns:ManifestAllocationInitRequestDto" />
+  <xs:complexType name="ManifestAllocationInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q5:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Branches" nillable="true" type="q6:ArrayOfBranches" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Clients" nillable="true" type="q7:ArrayOfClients" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestAllocationInitResponseDto" nillable="true" type="tns:ManifestAllocationInitResponseDto" />
+  <xs:complexType name="GetAirwayBillQuickRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AiwayBillId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocumentHeading" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAirwayBillQuickRequestDto" nillable="true" type="tns:GetAirwayBillQuickRequestDto" />
+  <xs:complexType name="ManifestInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestInitRequestDto" nillable="true" type="tns:ManifestInitRequestDto" />
+  <xs:complexType name="ManifestInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchesList" nillable="true" type="q11:ArrayOfBranches" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CitiesList" nillable="true" type="q12:ArrayOfCities" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsList" nillable="true" type="q13:ArrayOfClients" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountriesList" nillable="true" type="q14:ArrayOfCountries" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveryModesList" nillable="true" type="q15:ArrayOfDropdown" />
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveryTypesList" nillable="true" type="q16:ArrayOfDropdown" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DepartmentsList" nillable="true" type="q17:ArrayOfDepartments" />
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DestinationsList" nillable="true" type="q18:ArrayOfDropdown" />
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="MethodsOfPaymentList" nillable="true" type="q19:ArrayOfMethodsOfPayment" />
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="OriginsList" nillable="true" type="q20:ArrayOfDropdown" />
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ProductTypesList" nillable="true" type="q21:ArrayOfProducts" />
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ServiceTypesList" nillable="true" type="q22:ArrayOfDropdown" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestInitResponseDto" nillable="true" type="tns:ManifestInitResponseDto" />
+  <xs:complexType name="ManifestLoadAirwayBillRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q23:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNo" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestLoadAirwayBillRequestDto" nillable="true" type="tns:ManifestLoadAirwayBillRequestDto" />
+  <xs:complexType name="ManifestLoadAirwayBillResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q24:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ManifestDetails" nillable="true" type="q25:ManifestModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestLoadAirwayBillResponseDto" nillable="true" type="tns:ManifestLoadAirwayBillResponseDto" />
+  <xs:complexType name="ManifestSaveRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q26:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAutoGenerateAiwayBill" type="xs:boolean" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ManifestDtoModel" nillable="true" type="q27:ManifestModel" />
+          <xs:element minOccurs="0" name="SaveConsigneeAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SaveShipperAddress" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestSaveRequestDto" nillable="true" type="tns:ManifestSaveRequestDto" />
+  <xs:complexType name="ManifestSaveResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q28:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoGeneraterAWB" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestSaveResponseDto" nillable="true" type="tns:ManifestSaveResponseDto" />
+  <xs:complexType name="ManifestLoadBookingRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q29:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BookingID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestLoadBookingRequestDto" nillable="true" type="tns:ManifestLoadBookingRequestDto" />
+  <xs:complexType name="ManifestLoadBookingResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q30:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ManifestDetails" nillable="true" type="q31:ManifestModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestLoadBookingResponseDto" nillable="true" type="tns:ManifestLoadBookingResponseDto" />
+  <xs:complexType name="ManifestEditRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q32:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" minOccurs="0" name="ManifestDtoModel" nillable="true" type="q33:ManifestModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestEditRequestDto" nillable="true" type="tns:ManifestEditRequestDto" />
+  <xs:complexType name="ManifestEditResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q34:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestEditResponseDto" nillable="true" type="tns:ManifestEditResponseDto" />
+  <xs:complexType name="ManifestSaveAllocationRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q35:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AirwayBillAllocationList" nillable="true" type="q36:ArrayOfAirwayBillData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestSaveAllocationRequestDto" nillable="true" type="tns:ManifestSaveAllocationRequestDto" />
+  <xs:complexType name="ManifestSaveAllocationResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q37:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestSaveAllocationResponseDto" nillable="true" type="tns:ManifestSaveAllocationResponseDto" />
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.DubaiCustoms" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.DubaiCustoms" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.DubaiCustoms" />
+  <xs:complexType name="DubaiCustomsManifestByDateRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DubaiCustomsManifestByDateRequestDto" nillable="true" type="tns:DubaiCustomsManifestByDateRequestDto" />
+  <xs:complexType name="DubaiCustomsManifestByDateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.DubaiCustoms" minOccurs="0" name="DubaiCustomsAirwayBills" nillable="true" type="q3:ArrayOfDubaiCustomsAirwaybills" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DubaiCustomsManifestByDateResponseDto" nillable="true" type="tns:DubaiCustomsManifestByDateResponseDto" />
+  <xs:complexType name="DubaiCustomsManifestSaveAllocationRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.DubaiCustoms" minOccurs="0" name="DubaiCustomsAllocationList" nillable="true" type="q5:ArrayOfDubaiCustomsAirwaybills" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DubaiCustomsManifestSaveAllocationRequestDto" nillable="true" type="tns:DubaiCustomsManifestSaveAllocationRequestDto" />
+  <xs:complexType name="DubaiCustomsManifestSaveAllocationResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DubaiCustomsManifestSaveAllocationResponseDto" nillable="true" type="tns:DubaiCustomsManifestSaveAllocationResponseDto" />
+</xs:schema>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.CustomerAddressUpdate" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.CustomerAddressUpdate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:complexType name="CustomerAddressUpdateSendSMSRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CustomerSentSMSAirwayBilllst" nillable="true" type="q2:ArrayOfAirwayBillData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerAddressUpdateSendSMSRequestDto" nillable="true" type="tns:CustomerAddressUpdateSendSMSRequestDto" />
+  <xs:complexType name="CustomerAddressUpdateSendSMSResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q3:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerAddressUpdateSendSMSResponseDto" nillable="true" type="tns:CustomerAddressUpdateSendSMSResponseDto" />
+  <xs:complexType name="CustomerAddressUpdateRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+      <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PinNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerAddressUpdateRequestDto" nillable="true" type="tns:CustomerAddressUpdateRequestDto" />
+  <xs:complexType name="CustomerAddressUpdateResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerAddressUpdateResponseDto" nillable="true" type="tns:CustomerAddressUpdateResponseDto" />
+</xs:schema>

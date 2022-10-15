@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ProofOfDelivery" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ProofOfDelivery" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="GetDeliveredShipmentsRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Airwaybills" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeliveredShipmentId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDeliveredShipmentsRequestDto" nillable="true" type="tns:GetDeliveredShipmentsRequestDto" />
+  <xs:complexType name="GetDeliveredShipmentsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveredShipments" nillable="true" type="q3:ArrayOfDeliveredShipments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDeliveredShipmentsResponseDto" nillable="true" type="tns:GetDeliveredShipmentsResponseDto" />
+  <xs:complexType name="GetDeliveredShipmentResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveredShipment" nillable="true" type="q5:DeliveredShipments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDeliveredShipmentResponseDto" nillable="true" type="tns:GetDeliveredShipmentResponseDto" />
+  <xs:complexType name="AttachProofOfDeliveryRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttachProofOfDeliveryRequestDto" nillable="true" type="tns:AttachProofOfDeliveryRequestDto" />
+  <xs:complexType name="AttachProofOfDeliveryResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q7:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttachProofOfDeliveryResponseDto" nillable="true" type="tns:AttachProofOfDeliveryResponseDto" />
+</xs:schema>

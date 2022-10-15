@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Manifest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model" />
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failure" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="ManifestModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActionStatus" type="tns:Status" />
+          <xs:element minOccurs="0" name="ActualWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgentRefNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AirwayBillNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BookingRefNo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BookingStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChargeableWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneePostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescOfGoods" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocHeading" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocRefNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreightCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsManualRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Length" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickupBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickupTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Pieces" type="xs:int" />
+          <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedBranch" nillable="true" type="q2:Branches" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedClient" nillable="true" type="q3:Clients" />
+          <xs:element minOccurs="0" name="SelectedConfidentiality" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedConsigneeCity" nillable="true" type="q4:Dropdown" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedConsigneeCountry" nillable="true" type="q5:Dropdown" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDeliveryModeId" nillable="true" type="q6:Dropdown" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDeliveryTypeId" nillable="true" type="q7:Dropdown" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDepartment" nillable="true" type="q8:Departments" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDestination" nillable="true" type="q9:Dropdown" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDestinationCountry" nillable="true" type="q10:Dropdown" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedMethodOfPayment" nillable="true" type="q11:MethodsOfPayment" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedOrigin" nillable="true" type="q12:Dropdown" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedOriginCountry" nillable="true" type="q13:Dropdown" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedProductTypeId" nillable="true" type="q14:Products" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedServiceTypeId" nillable="true" type="q15:Dropdown" />
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedShipperCity" nillable="true" type="q16:Dropdown" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedShipperCountry" nillable="true" type="q17:Dropdown" />
+          <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VolumetricWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Width" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManifestModel" nillable="true" type="tns:ManifestModel" />
+  <xs:complexType name="ArrayOfManifestModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ManifestModel" nillable="true" type="tns:ManifestModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManifestModel" nillable="true" type="tns:ArrayOfManifestModel" />
+  <xs:complexType name="ArrayOfBulkManifestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BulkManifestData" nillable="true" type="tns:BulkManifestData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBulkManifestData" nillable="true" type="tns:ArrayOfBulkManifestData" />
+  <xs:complexType name="BulkManifestData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q18:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActionStatus" type="tns:Status" />
+          <xs:element minOccurs="0" name="ActualWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgentRefNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AirwayBillNo" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BookingRefNo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChargeableWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeCityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeCountryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneePostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryModeId" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescriptionOfGoods" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentHeading" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentReferenceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreightCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsConfidential" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsManualRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Length" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MethodOfPayment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickupBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickupTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Pieces" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperCityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperCountryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VolumetricWeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Width" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkManifestData" nillable="true" type="tns:BulkManifestData" />
+</xs:schema>

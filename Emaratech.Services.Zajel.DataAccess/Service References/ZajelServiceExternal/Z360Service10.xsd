@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Reports" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Reports" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Reports" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ReportsInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReportsInitRequestDto" nillable="true" type="tns:ReportsInitRequestDto" />
+  <xs:complexType name="ReportsInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Branches" nillable="true" type="q3:ArrayOfBranches" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Clients" nillable="true" type="q4:ArrayOfClients" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Couriers" nillable="true" type="q5:ArrayOfCouriers" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveryModesList" nillable="true" type="q6:ArrayOfDropdown" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveryTypesList" nillable="true" type="q7:ArrayOfDropdown" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ProductTypesList" nillable="true" type="q8:ArrayOfProducts" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Routes" nillable="true" type="q9:ArrayOfRoutes" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ServiceTypesList" nillable="true" type="q10:ArrayOfDropdown" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="StatusCodeList" nillable="true" type="q11:ArrayOfStatuses" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ValueOneStatusList" nillable="true" type="q12:ArrayOfStatuses" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ValueTwoStatusList" nillable="true" type="q13:ArrayOfStatuses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReportsInitResponseDto" nillable="true" type="tns:ReportsInitResponseDto" />
+  <xs:complexType name="CCReportsInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q14:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CCReportsInitRequestDto" nillable="true" type="tns:CCReportsInitRequestDto" />
+  <xs:complexType name="CCReportsInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Statuses" nillable="true" type="q16:ArrayOfStatuses" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Users" nillable="true" type="q17:ArrayOfUsers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CCReportsInitResponseDto" nillable="true" type="tns:CCReportsInitResponseDto" />
+  <xs:complexType name="AllocationReportRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q18:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AllocationReportRequestDto" nillable="true" type="tns:AllocationReportRequestDto" />
+  <xs:complexType name="AllocationReportResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q19:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AllocationReportResponse" nillable="true" type="q20:ArrayOfAllocationReportResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AllocationReportResponseDto" nillable="true" type="tns:AllocationReportResponseDto" />
+  <xs:complexType name="BWShipmentsCountReportRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q21:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedProductsIds" nillable="true" type="q22:ArrayOfint" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BWShipmentsCountReportRequestDto" nillable="true" type="tns:BWShipmentsCountReportRequestDto" />
+  <xs:complexType name="BWShipmentsCountResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q23:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchEightCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchEightName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchEightTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchFiveCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchFiveName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchFiveTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchFourCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchFourName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchFourTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchNineCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchNineName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchNineTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchOneCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchOneName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchOneTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchSevenCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSevenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSevenTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchSixCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSixName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSixTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchTenCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchTenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchTenTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchThreeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchThreeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchThreeTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="BranchTwoCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchTwoName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchTwoTotal" type="xs:long" />
+          <xs:element minOccurs="0" name="GrandTotal" type="xs:long" />
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Reports" minOccurs="0" name="ListBWShipmentsCount" nillable="true" type="q24:ArrayOfReportModel.BWShipmentsCount" />
+          <xs:element minOccurs="0" name="TotalBranches" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BWShipmentsCountResponseDto" nillable="true" type="tns:BWShipmentsCountResponseDto" />
+  <xs:complexType name="StatusesCountRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q25:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusesCountRequestDto" nillable="true" type="tns:StatusesCountRequestDto" />
+  <xs:complexType name="StatusesCountResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q26:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviceId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Reports" minOccurs="0" name="ListStatusesCount" nillable="true" type="q27:ArrayOfReportModel.StatusesCount" />
+          <xs:element minOccurs="0" name="RouteId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusesCountResponseDto" nillable="true" type="tns:StatusesCountResponseDto" />
+  <xs:complexType name="DepartmentWiseReportInitDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q28:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Departments" nillable="true" type="q29:ArrayOfDepartments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DepartmentWiseReportInitDto" nillable="true" type="tns:DepartmentWiseReportInitDto" />
+</xs:schema>

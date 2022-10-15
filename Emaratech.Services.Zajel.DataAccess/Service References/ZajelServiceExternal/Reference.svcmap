@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="44ec0215-9b0d-4ebf-b568-8037c724a57f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://94.56.40.10:7778/Z360Service.svc?wsdl " Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Z360Service.xsd" MetadataType="Schema" ID="ca8e05d2-a40d-449c-891e-2864911ca706" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd53" />
+    <MetadataFile FileName="Z360Service1.xsd" MetadataType="Schema" ID="61cd0ac3-118b-4150-8170-53c2dbd437d3" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd52" />
+    <MetadataFile FileName="Z360Service2.xsd" MetadataType="Schema" ID="32926c51-5c5d-40fd-b0db-a2136ccb9661" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd51" />
+    <MetadataFile FileName="Z360Service3.xsd" MetadataType="Schema" ID="a8076037-464e-4fa4-9255-b10fba6f9d24" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd50" />
+    <MetadataFile FileName="Z360Service4.xsd" MetadataType="Schema" ID="9ad48033-1457-4abf-b75c-2d8972c2a619" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd49" />
+    <MetadataFile FileName="Z360Service5.xsd" MetadataType="Schema" ID="bafb2249-d849-4d55-9443-5ac66794b31d" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Z360Service6.xsd" MetadataType="Schema" ID="8655a5c4-5acc-45be-9800-a855ca9d8a25" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd19" />
+    <MetadataFile FileName="Z360Service7.xsd" MetadataType="Schema" ID="32ac767c-803f-4fc4-9acf-37f706bfe131" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd18" />
+    <MetadataFile FileName="Z360Service8.xsd" MetadataType="Schema" ID="3f0d00e7-f6a3-4aa9-a10f-32ce29bfcb98" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd17" />
+    <MetadataFile FileName="Z360Service9.xsd" MetadataType="Schema" ID="b98dcc20-70a5-4a24-ac1d-8e3ff74455a0" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd16" />
+    <MetadataFile FileName="Z360Service10.xsd" MetadataType="Schema" ID="26ef35fd-30db-41ca-8d83-5a3fb1756f3e" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd15" />
+    <MetadataFile FileName="Z360Service11.xsd" MetadataType="Schema" ID="32d0a3ea-32df-49c9-8997-53d59623e28a" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd14" />
+    <MetadataFile FileName="Z360Service12.xsd" MetadataType="Schema" ID="17b5e982-a6da-4cef-b9de-df01ca3fd9fc" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd13" />
+    <MetadataFile FileName="Z360Service13.xsd" MetadataType="Schema" ID="1a2142ba-b8aa-4621-888c-7b288e4db2d9" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd12" />
+    <MetadataFile FileName="Z360Service14.xsd" MetadataType="Schema" ID="a11e5fcc-ec83-4672-bea1-349bda2f8afb" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd11" />
+    <MetadataFile FileName="Z360Service15.xsd" MetadataType="Schema" ID="23be5d9a-c8c9-4d2d-a559-38247de19724" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd8" />
+    <MetadataFile FileName="Z360Service16.xsd" MetadataType="Schema" ID="08c5a8ec-5ad2-4d18-a88b-0b981e58efb0" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd39" />
+    <MetadataFile FileName="Z360Service17.xsd" MetadataType="Schema" ID="ced79d51-3dfd-4284-b2fd-66544a801089" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" />
+    <MetadataFile FileName="Z360Service18.xsd" MetadataType="Schema" ID="4f6c5e31-6cb4-47e3-81dd-6e1b03cef095" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd9" />
+    <MetadataFile FileName="Z360Service19.xsd" MetadataType="Schema" ID="f58d4f5f-e7b1-4885-b780-bd9604cc0d83" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd29" />
+    <MetadataFile FileName="Z360Service20.xsd" MetadataType="Schema" ID="72e9eac5-605e-4b2f-9d66-8b005fe23dbb" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd28" />
+    <MetadataFile FileName="Z360Service21.xsd" MetadataType="Schema" ID="f9feae59-e07a-46c0-8d16-ad9a40282cb9" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd27" />
+    <MetadataFile FileName="Z360Service22.xsd" MetadataType="Schema" ID="860375a6-542d-473f-b1c3-90c5e9d7a26a" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd10" />
+    <MetadataFile FileName="Z360Service23.xsd" MetadataType="Schema" ID="12ccaaf5-47c4-4db5-b6dd-208323d4aee7" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd25" />
+    <MetadataFile FileName="Z360Service24.xsd" MetadataType="Schema" ID="4420f8fa-65c6-490f-8ee0-a7d81672d24e" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd24" />
+    <MetadataFile FileName="Z360Service25.xsd" MetadataType="Schema" ID="df00c00c-8fee-4046-997d-48dbf0882543" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd23" />
+    <MetadataFile FileName="Z360Service26.xsd" MetadataType="Schema" ID="cb82b5bd-5eae-4a6e-9d2a-d8230523ec36" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd22" />
+    <MetadataFile FileName="Z360Service27.xsd" MetadataType="Schema" ID="c4a627f2-36c8-4035-9fe4-5766fd1756e9" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd21" />
+    <MetadataFile FileName="Z360Service28.xsd" MetadataType="Schema" ID="2eddfc1b-19bc-4285-9f8c-fa7d5e3563cc" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd20" />
+    <MetadataFile FileName="Z360Service29.xsd" MetadataType="Schema" ID="84dc0358-4bf3-4f5c-9e35-19cab507d146" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd5" />
+    <MetadataFile FileName="Z360Service.wsdl" MetadataType="Wsdl" ID="c3c43917-498d-4183-b570-4902acc2556a" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?wsdl" />
+    <MetadataFile FileName="Z360Service30.xsd" MetadataType="Schema" ID="29f5b413-5974-490b-a324-4e2de9bcae04" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Z360Service31.xsd" MetadataType="Schema" ID="86a175dc-924e-49cf-a531-29732c64e43a" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd38" />
+    <MetadataFile FileName="Z360Service32.xsd" MetadataType="Schema" ID="43e61519-e2c4-44a3-a3ab-607e171a941a" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd37" />
+    <MetadataFile FileName="Z360Service33.xsd" MetadataType="Schema" ID="caf98a33-4981-479d-a910-3fd875c1f26f" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd36" />
+    <MetadataFile FileName="Z360Service34.xsd" MetadataType="Schema" ID="0592ab1a-0467-4236-a472-14c3186fa165" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd35" />
+    <MetadataFile FileName="Z360Service35.xsd" MetadataType="Schema" ID="f2027104-6108-4f9a-b417-ed48a9d27b4f" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd34" />
+    <MetadataFile FileName="Z360Service36.xsd" MetadataType="Schema" ID="4fd15458-c5d0-4f28-b6d3-f952f10ccce4" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd33" />
+    <MetadataFile FileName="Z360Service37.xsd" MetadataType="Schema" ID="859b95e3-f1f3-4155-a2d9-d0fff1015494" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd32" />
+    <MetadataFile FileName="Z360Service38.xsd" MetadataType="Schema" ID="6742b000-9dfc-4203-8501-beb8616769dc" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd31" />
+    <MetadataFile FileName="Z360Service39.xsd" MetadataType="Schema" ID="6a3e0327-1193-4e52-851f-e42c16b21174" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd30" />
+    <MetadataFile FileName="Z360Service40.xsd" MetadataType="Schema" ID="6e8fa7ff-8041-4766-816a-1daae7863451" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd6" />
+    <MetadataFile FileName="Z360Service41.xsd" MetadataType="Schema" ID="50c155bd-056a-4a28-9349-b775bda20a90" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Z360Service42.xsd" MetadataType="Schema" ID="ccbc120d-08f0-4fad-a49e-a6a11363771d" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd48" />
+    <MetadataFile FileName="Z360Service43.xsd" MetadataType="Schema" ID="e08dac0e-d677-4b97-92ce-9acccf70a67d" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd47" />
+    <MetadataFile FileName="Z360Service44.xsd" MetadataType="Schema" ID="91c09db3-b767-4f68-a89d-7553b03dbe12" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd46" />
+    <MetadataFile FileName="Z360Service45.xsd" MetadataType="Schema" ID="e0c76e9d-b056-4ddf-814a-b8d277240d53" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd45" />
+    <MetadataFile FileName="Z360Service46.xsd" MetadataType="Schema" ID="7c2e94f6-2dde-4e31-8090-5571b1cf28a9" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd44" />
+    <MetadataFile FileName="Z360Service47.xsd" MetadataType="Schema" ID="3f505ae9-b287-464c-adbe-4948af118fef" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd43" />
+    <MetadataFile FileName="Z360Service48.xsd" MetadataType="Schema" ID="37465a53-e1f2-43e6-b98a-1b3d2d5a03cb" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd42" />
+    <MetadataFile FileName="Z360Service49.xsd" MetadataType="Schema" ID="c3278f5e-bb93-4f54-80b1-3ca0e285103b" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd41" />
+    <MetadataFile FileName="Z360Service50.xsd" MetadataType="Schema" ID="b1f17608-95c5-4445-a362-3133fe3462cf" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd40" />
+    <MetadataFile FileName="Z360Service51.xsd" MetadataType="Schema" ID="31ab81af-abdd-4e15-8538-e14fe223077b" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd7" />
+    <MetadataFile FileName="Z360Service52.xsd" MetadataType="Schema" ID="86d0d37d-e775-4a5e-b0d5-140c672a1a94" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd26" />
+    <MetadataFile FileName="Z360Service53.xsd" MetadataType="Schema" ID="582e5c5e-ec5a-4905-bda7-855aa7f6f2de" SourceId="1" SourceUrl="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

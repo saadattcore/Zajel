@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.ViewInternationalRates" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.ViewInternationalRates" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" />
+  <xs:complexType name="ViewInternationalRatesInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewInternationalRatesInitRequestDto" nillable="true" type="tns:ViewInternationalRatesInitRequestDto" />
+  <xs:complexType name="ViewInternationalRatesInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsList" nillable="true" type="q3:ArrayOfClients" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountriesList" nillable="true" type="q4:ArrayOfCountries" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeliveryTypesList" nillable="true" type="q5:ArrayOfDropdown" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ProductTypesList" nillable="true" type="q6:ArrayOfProducts" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ServiceTypesList" nillable="true" type="q7:ArrayOfDropdown" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ZonesList" nillable="true" type="q8:ArrayOfDropdown" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewInternationalRatesInitResponseDto" nillable="true" type="tns:ViewInternationalRatesInitResponseDto" />
+  <xs:complexType name="ViewInternationalRatesSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedClient" nillable="true" type="q10:Clients" />
+          <xs:element minOccurs="0" name="SelectedDate" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDeliveryType" nillable="true" type="q11:Dropdown" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDestinationCountry" nillable="true" type="q12:Countries" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedProductType" nillable="true" type="q13:Products" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedServiceType" nillable="true" type="q14:Dropdown" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedZone" nillable="true" type="q15:Dropdown" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewInternationalRatesSearchRequestDto" nillable="true" type="tns:ViewInternationalRatesSearchRequestDto" />
+  <xs:complexType name="ViewInternationalRatesSearchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" minOccurs="0" name="RatesData" nillable="true" type="q17:ArrayOfIntRatesGridModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewInternationalRatesSearchResponseDto" nillable="true" type="tns:ViewInternationalRatesSearchResponseDto" />
+</xs:schema>

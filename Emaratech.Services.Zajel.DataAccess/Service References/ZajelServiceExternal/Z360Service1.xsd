@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Booking" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Booking" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" />
+  <xs:complexType name="BookingModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNo" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BookingRefNo" type="xs:int" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClosingDatenTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneePostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsigneeSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DescOfGoods" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocHeading" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocRefNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Length" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pieces" type="xs:int" />
+          <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyDatenTime" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedBranch" nillable="true" type="q2:Branches" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedClient" nillable="true" type="q3:Clients" />
+          <xs:element minOccurs="0" name="SelectedConfidentiality" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedConsigneeCity" nillable="true" type="q4:Dropdown" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedConsigneeCountry" nillable="true" type="q5:Dropdown" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDeliveryMode" nillable="true" type="q6:Dropdown" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDeliveryType" nillable="true" type="q7:Dropdown" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDepartment" nillable="true" type="q8:Departments" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDestinationCity" nillable="true" type="q9:Dropdown" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedDestinationCountry" nillable="true" type="q10:Dropdown" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedMethodOfPayment" nillable="true" type="q11:MethodsOfPayment" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedOriginCity" nillable="true" type="q12:Dropdown" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedOriginCountry" nillable="true" type="q13:Dropdown" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedProductType" nillable="true" type="q14:Dropdown" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedServiceType" nillable="true" type="q15:Dropdown" />
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedShipperCity" nillable="true" type="q16:Dropdown" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SelectedShipperCountry" nillable="true" type="q17:Dropdown" />
+          <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipperSecondaryNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusCodeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Width" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BookingModel" nillable="true" type="tns:BookingModel" />
+  <xs:complexType name="ArrayOfBookingStatusCourier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BookingStatusCourier" nillable="true" type="tns:BookingStatusCourier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBookingStatusCourier" nillable="true" type="tns:ArrayOfBookingStatusCourier" />
+  <xs:complexType name="BookingStatusCourier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllocatedCourierId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingCurrentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BookingStatusCourier" nillable="true" type="tns:BookingStatusCourier" />
+</xs:schema>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.UserManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.UserManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="UserManagementAddUserRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateOfLastPassChange" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectedBranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectedClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectedRoleId" type="xs:int" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementAddUserRequestDto" nillable="true" type="tns:UserManagementAddUserRequestDto" />
+  <xs:complexType name="UserManagementAddUserResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementAddUserResponseDto" nillable="true" type="tns:UserManagementAddUserResponseDto" />
+  <xs:complexType name="UserManagementCheckAvailabilityRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q3:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementCheckAvailabilityRequestDto" nillable="true" type="tns:UserManagementCheckAvailabilityRequestDto" />
+  <xs:complexType name="UserManagementCheckAvailabilityResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseResponseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAvailable" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementCheckAvailabilityResponseDto" nillable="true" type="tns:UserManagementCheckAvailabilityResponseDto" />
+  <xs:complexType name="UserManagementChangePasswordRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q5:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementChangePasswordRequestDto" nillable="true" type="tns:UserManagementChangePasswordRequestDto" />
+  <xs:complexType name="UserManagementChangePasswordResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementChangePasswordResponseDto" nillable="true" type="tns:UserManagementChangePasswordResponseDto" />
+  <xs:complexType name="UserManagementAddPermissionRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q7:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PermissionId" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementAddPermissionRequestDto" nillable="true" type="tns:UserManagementAddPermissionRequestDto" />
+  <xs:complexType name="UserManagementAddPermissionResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q8:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AssignedPermissionList" nillable="true" type="q9:ArrayOfSecurityPermissionAssigns" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailablePermissionList" nillable="true" type="q10:ArrayOfSecurityPermissionAssigns" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementAddPermissionResponseDto" nillable="true" type="tns:UserManagementAddPermissionResponseDto" />
+  <xs:complexType name="UserManagementRemovePermissionRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q11:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PermissionId" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementRemovePermissionRequestDto" nillable="true" type="tns:UserManagementRemovePermissionRequestDto" />
+  <xs:complexType name="UserManagementRemovePermissionResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AssignedPermissionList" nillable="true" type="q13:ArrayOfSecurityPermissionAssigns" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailablePermissionList" nillable="true" type="q14:ArrayOfSecurityPermissionAssigns" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementRemovePermissionResponseDto" nillable="true" type="tns:UserManagementRemovePermissionResponseDto" />
+  <xs:complexType name="UserManagementGetAvailablePermissionsRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementGetAvailablePermissionsRequestDto" nillable="true" type="tns:UserManagementGetAvailablePermissionsRequestDto" />
+  <xs:complexType name="UserManagementGetAvailablePermissionsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="PermissionList" nillable="true" type="q17:ArrayOfSecurityPermissionAssigns" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementGetAvailablePermissionsResponseDto" nillable="true" type="tns:UserManagementGetAvailablePermissionsResponseDto" />
+  <xs:complexType name="UserManagementGetPermissionsByRoleRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q18:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementGetPermissionsByRoleRequestDto" nillable="true" type="tns:UserManagementGetPermissionsByRoleRequestDto" />
+  <xs:complexType name="UserManagementGetPermissionsByRoleResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q19:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="PermissionList" nillable="true" type="q20:ArrayOfSecurityPermissionAssigns" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementGetPermissionsByRoleResponseDto" nillable="true" type="tns:UserManagementGetPermissionsByRoleResponseDto" />
+  <xs:complexType name="UserManagementInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q21:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementInitRequestDto" nillable="true" type="tns:UserManagementInitRequestDto" />
+  <xs:complexType name="UserManagementInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q22:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q23:ArrayOfBranches" />
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q24:ArrayOfClients" />
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="PermissionList" nillable="true" type="q25:ArrayOfSecurityPermissionAssigns" />
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="RoleList" nillable="true" type="q26:ArrayOfSecurityRoles" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserManagementInitResponseDto" nillable="true" type="tns:UserManagementInitResponseDto" />
+</xs:schema>

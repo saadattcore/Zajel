@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="GetServiceTypesRequestDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="GetServiceTypesRequestDto" nillable="true" type="tns:GetServiceTypesRequestDto" />
+  <xs:complexType name="GetServiceTypesResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="myService" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetServiceTypesResponseDto" nillable="true" type="tns:GetServiceTypesResponseDto" />
+  <xs:complexType name="GetCountriesRequestDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="GetCountriesRequestDto" nillable="true" type="tns:GetCountriesRequestDto" />
+  <xs:complexType name="GetCountriesResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="myCountry" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCountriesResponseDto" nillable="true" type="tns:GetCountriesResponseDto" />
+  <xs:complexType name="GetCouriersRequestDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q1:ArrayOfCouriers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCouriersRequestDto" nillable="true" type="tns:GetCouriersRequestDto" />
+  <xs:complexType name="GetCouriersResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q2:ArrayOfCouriers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCouriersResponseDto" nillable="true" type="tns:GetCouriersResponseDto" />
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.ManualCostCalculation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.Rates.ManualCostCalculation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" />
+  <xs:complexType name="ManualCostCalculationGetAirwayBillDetailsRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillNo" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManualCostCalculationGetAirwayBillDetailsRequestDto" nillable="true" type="tns:ManualCostCalculationGetAirwayBillDetailsRequestDto" />
+  <xs:complexType name="ManualCostCalculationGetAirwayBillDetailsResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" minOccurs="0" name="AirwayBillDetails" nillable="true" type="q3:ManualRatesModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManualCostCalculationGetAirwayBillDetailsResponseDto" nillable="true" type="tns:ManualCostCalculationGetAirwayBillDetailsResponseDto" />
+  <xs:complexType name="ManualCostCalculationSaveRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q4:BaseRequestDto">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" minOccurs="0" name="ShipmentsCostData" nillable="true" type="q5:ArrayOfManualRatesModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManualCostCalculationSaveRequestDto" nillable="true" type="tns:ManualCostCalculationSaveRequestDto" />
+  <xs:complexType name="ManualCostCalculationSaveResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q6:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" minOccurs="0" name="ShipmentsCostsUpdatedData" nillable="true" type="q7:ArrayOfManualRatesModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManualCostCalculationSaveResponseDto" nillable="true" type="tns:ManualCostCalculationSaveResponseDto" />
+</xs:schema>

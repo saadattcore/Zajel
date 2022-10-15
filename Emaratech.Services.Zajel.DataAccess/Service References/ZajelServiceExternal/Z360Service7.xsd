@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ZTron" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.ZTron" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCouriersAllocatedBookings">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CouriersAllocatedBookings" nillable="true" type="tns:CouriersAllocatedBookings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCouriersAllocatedBookings" nillable="true" type="tns:ArrayOfCouriersAllocatedBookings" />
+  <xs:complexType name="CouriersAllocatedBookings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirwayBillId" type="xs:long" />
+      <xs:element minOccurs="0" name="ApproxWeight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsgineeCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsgineeCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsgineeSecondaryContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeContactPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeOrganization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocHeadingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentReferenceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManifestPieces" type="xs:int" />
+      <xs:element minOccurs="0" name="Pieces" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReadyDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperContactPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperNearestLandmark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CouriersAllocatedBookings" nillable="true" type="tns:CouriersAllocatedBookings" />
+</xs:schema>

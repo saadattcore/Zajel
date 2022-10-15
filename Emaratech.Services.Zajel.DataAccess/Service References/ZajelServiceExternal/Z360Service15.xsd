@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Rates" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model" />
+  <xs:complexType name="ArrayOfManualRatesModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ManualRatesModel" nillable="true" type="tns:ManualRatesModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManualRatesModel" nillable="true" type="tns:ArrayOfManualRatesModel" />
+  <xs:complexType name="ManualRatesModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q1:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirwayBillID" type="xs:long" />
+          <xs:element minOccurs="0" name="CalculationMethod" type="tns:CalculationMethods" />
+          <xs:element minOccurs="0" name="CalculationMethodString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreightCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManifestDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OriginCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherCharges" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalCost" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManualRatesModel" nillable="true" type="tns:ManualRatesModel" />
+  <xs:simpleType name="CalculationMethods">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Manual" />
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CalculationMethods" nillable="true" type="tns:CalculationMethods" />
+  <xs:complexType name="ArrayOfViewRatesModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewRatesModel" nillable="true" type="tns:ViewRatesModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewRatesModel" nillable="true" type="tns:ArrayOfViewRatesModel" />
+  <xs:complexType name="ViewRatesModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q2:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AddWeight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WeightFrom" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WeightTo" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewRatesModel" nillable="true" type="tns:ViewRatesModel" />
+  <xs:complexType name="ArrayOfAddRatesModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddRatesModel" nillable="true" type="tns:AddRatesModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddRatesModel" nillable="true" type="tns:ArrayOfAddRatesModel" />
+  <xs:complexType name="AddRatesModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ViewRatesModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RowError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipmentRateId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddRatesModel" nillable="true" type="tns:AddRatesModel" />
+  <xs:complexType name="ArrayOfIntRatesGridModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntRatesGridModel" nillable="true" type="tns:IntRatesGridModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntRatesGridModel" nillable="true" type="tns:ArrayOfIntRatesGridModel" />
+  <xs:complexType name="IntRatesGridModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model" base="q3:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationZone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExtraCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfitPercentage" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnitOfIncrement" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VendorRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WeightFrom" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WeightTo" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WeightUpperRange" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntRatesGridModel" nillable="true" type="tns:IntRatesGridModel" />
+  <xs:complexType name="ArrayOfAddIntRatesGridModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddIntRatesGridModel" nillable="true" type="tns:AddIntRatesGridModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddIntRatesGridModel" nillable="true" type="tns:ArrayOfAddIntRatesGridModel" />
+  <xs:complexType name="AddIntRatesGridModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IntRatesGridModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RowError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipmentRateId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddIntRatesGridModel" nillable="true" type="tns:AddIntRatesGridModel" />
+</xs:schema>

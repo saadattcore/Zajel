@@ -1,0 +1,6 @@
+﻿<%@ ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="Emaratech.Services.Zajel.ZajelService" 
+    CodeBehind="ZajelService.svc.cs"  
+    Factory="Emaratech.Services.WcfCommons.Dynamic.DecoratorNinjectServiceHostFactory" %>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ClientManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.ClientManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:complexType name="ClientManagementInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientManagementInitRequestDto" nillable="true" type="tns:ClientManagementInitRequestDto" />
+  <xs:complexType name="ClientManagementInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q3:ArrayOfBranches" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CityList" nillable="true" type="q4:ArrayOfCities" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q5:ArrayOfClients" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsWithBranchesAndDepartmentsList" nillable="true" type="q6:ArrayOfClients" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsWithBranchesList" nillable="true" type="q7:ArrayOfClients" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountryList" nillable="true" type="q8:ArrayOfCountries" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientManagementInitResponseDto" nillable="true" type="tns:ClientManagementInitResponseDto" />
+  <xs:complexType name="CMCreateClientRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoAllocation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientHasBranches" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientIsBulkCustomer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientSecondaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractImage" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationsRequired" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateClientRequestDto" nillable="true" type="tns:CMCreateClientRequestDto" />
+  <xs:complexType name="CMCreateClientResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q11:ArrayOfClients" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateClientResponseDto" nillable="true" type="tns:CMCreateClientResponseDto" />
+  <xs:complexType name="CMCreateBranchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchClient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchHasDepartments" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSecondaryContactNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateBranchRequestDto" nillable="true" type="tns:CMCreateBranchRequestDto" />
+  <xs:complexType name="CMCreateBranchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q13:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q14:ArrayOfBranches" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsWithBranchesandDepartments" nillable="true" type="q15:ArrayOfClients" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateBranchResponseDto" nillable="true" type="tns:CMCreateBranchResponseDto" />
+  <xs:complexType name="CMCreateDepartmentRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentBranch" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentSecondaryContactNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateDepartmentRequestDto" nillable="true" type="tns:CMCreateDepartmentRequestDto" />
+  <xs:complexType name="CMCreateDepartmentResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q17:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DepartmentList" nillable="true" type="q18:ArrayOfDepartments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMCreateDepartmentResponseDto" nillable="true" type="tns:CMCreateDepartmentResponseDto" />
+  <xs:complexType name="BulkPrePrintInitRequestDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BulkPrePrintInitRequestDto" nillable="true" type="tns:BulkPrePrintInitRequestDto" />
+  <xs:complexType name="BulkPrePrintInitResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CitiesList" nillable="true" type="q19:ArrayOfDropdown" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientsList" nillable="true" type="q20:ArrayOfClients" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountriesList" nillable="true" type="q21:ArrayOfDropdown" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ProductsList" nillable="true" type="q22:ArrayOfDropdown" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BulkPrePrintInitResponseDto" nillable="true" type="tns:BulkPrePrintInitResponseDto" />
+  <xs:complexType name="ClientManagementSearchInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q23:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientManagementSearchInitRequestDto" nillable="true" type="tns:ClientManagementSearchInitRequestDto" />
+  <xs:complexType name="ClientManagementSearchInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q24:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q25:ArrayOfBranches" />
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CityList" nillable="true" type="q26:ArrayOfCities" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q27:ArrayOfClients" />
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountryList" nillable="true" type="q28:ArrayOfCountries" />
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DeptList" nillable="true" type="q29:ArrayOfDepartments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientManagementSearchInitResponseDto" nillable="true" type="tns:ClientManagementSearchInitResponseDto" />
+  <xs:complexType name="CMSearchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q30:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SearchString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMSearchRequestDto" nillable="true" type="tns:CMSearchRequestDto" />
+  <xs:complexType name="CMSearchClientResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q31:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SearchResults" nillable="true" type="q32:ArrayOfClients" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMSearchClientResponseDto" nillable="true" type="tns:CMSearchClientResponseDto" />
+  <xs:complexType name="CMSearchBranchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q33:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SearchResults" nillable="true" type="q34:ArrayOfBranches" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMSearchBranchResponseDto" nillable="true" type="tns:CMSearchBranchResponseDto" />
+  <xs:complexType name="CMSearchDepartmentResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q35:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="SearchResults" nillable="true" type="q36:ArrayOfDepartments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMSearchDepartmentResponseDto" nillable="true" type="tns:CMSearchDepartmentResponseDto" />
+  <xs:complexType name="CMModifyClientRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q37:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoAllocation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientBlockingDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ClientBlockingRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientHasBranches" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientIsBulkCustomer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientSecondaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractImage" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationsRequired" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyClientRequestDto" nillable="true" type="tns:CMModifyClientRequestDto" />
+  <xs:complexType name="CMModifyClientResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q38:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ClientList" nillable="true" type="q39:ArrayOfClients" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyClientResponseDto" nillable="true" type="tns:CMModifyClientResponseDto" />
+  <xs:complexType name="CMModifyBranchRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q40:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchClient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchHasDepartments" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchSecondaryContactNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyBranchRequestDto" nillable="true" type="tns:CMModifyBranchRequestDto" />
+  <xs:complexType name="CMModifyBranchResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q41:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="BranchList" nillable="true" type="q42:ArrayOfBranches" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyBranchResponseDto" nillable="true" type="tns:CMModifyBranchResponseDto" />
+  <xs:complexType name="CMModifyDepartmentRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q43:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentBranch" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentNearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentPrimaryContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepartmentSecondaryContactNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyDepartmentRequestDto" nillable="true" type="tns:CMModifyDepartmentRequestDto" />
+  <xs:complexType name="CMModifyDepartmentResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q44:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="DepartmentList" nillable="true" type="q45:ArrayOfDepartments" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CMModifyDepartmentResponseDto" nillable="true" type="tns:CMModifyDepartmentResponseDto" />
+</xs:schema>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.StockManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfStockCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockCategory" nillable="true" type="tns:StockCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockCategory" nillable="true" type="tns:ArrayOfStockCategory" />
+  <xs:complexType name="StockCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockCategoryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockCategoryId" type="xs:int" />
+          <xs:element minOccurs="0" name="StockCategoryName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockCategory" nillable="true" type="tns:StockCategory" />
+  <xs:complexType name="ArrayOfStockItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockItem" nillable="true" type="tns:StockItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockItem" nillable="true" type="tns:ArrayOfStockItem" />
+  <xs:complexType name="StockItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockCategory" nillable="true" type="tns:StockCategory" />
+          <xs:element minOccurs="0" name="StockItemDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="StockItemName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockItem" nillable="true" type="tns:StockItem" />
+  <xs:complexType name="ArrayOfStockSubItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockSubItem" nillable="true" type="tns:StockSubItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockSubItem" nillable="true" type="tns:ArrayOfStockSubItem" />
+  <xs:complexType name="StockSubItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StockItem" nillable="true" type="tns:StockItem" />
+          <xs:element minOccurs="0" name="StockItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="StockSubItemBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockSubItemDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockSubItemId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StockSubItemName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockSubItem" nillable="true" type="tns:StockSubItem" />
+  <xs:complexType name="ArrayOfVendor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vendor" nillable="true" type="tns:Vendor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVendor" nillable="true" type="tns:ArrayOfVendor" />
+  <xs:complexType name="Vendor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LandLineNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorId" type="xs:int" />
+          <xs:element minOccurs="0" name="VendorType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Vendor" nillable="true" type="tns:Vendor" />
+  <xs:complexType name="ArrayOfStockDetailsModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockDetailsModel" nillable="true" type="tns:StockDetailsModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockDetailsModel" nillable="true" type="tns:ArrayOfStockDetailsModel" />
+  <xs:complexType name="StockDetailsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BeforeModifiedNoOfPieces" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BeforeSelectedStockItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="BeforeSelectedStockSubItemId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateReceived" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ListStockItems" nillable="true" type="tns:ArrayOfStockItem" />
+          <xs:element minOccurs="0" name="ListStockSubItems" nillable="true" type="tns:ArrayOfStockSubItem" />
+          <xs:element minOccurs="0" name="ListVendor" nillable="true" type="tns:ArrayOfVendor" />
+          <xs:element minOccurs="0" name="NoOfPieces" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SearchOrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectedStockItem" nillable="true" type="tns:StockItem" />
+          <xs:element minOccurs="0" name="SelectedStockSubItem" nillable="true" type="tns:StockSubItem" />
+          <xs:element minOccurs="0" name="SelectedVendor" nillable="true" type="tns:Vendor" />
+          <xs:element minOccurs="0" name="StockDetailsId" type="xs:int" />
+          <xs:element minOccurs="0" name="StockItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockSubItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TodaysDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TotalPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnitPrice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockDetailsModel" nillable="true" type="tns:StockDetailsModel" />
+  <xs:complexType name="ArrayOfStockUsageModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockUsageModel" nillable="true" type="tns:StockUsageModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockUsageModel" nillable="true" type="tns:ArrayOfStockUsageModel" />
+  <xs:complexType name="StockUsageModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Z360.Common.Framework" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BeforeModifiedNoOfPiecesUsed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BeforeSelectedStockItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="BeforeSelectedStockSubItemId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateUsed" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ListStockItems" nillable="true" type="tns:ArrayOfStockItem" />
+          <xs:element minOccurs="0" name="ListStockSubItems" nillable="true" type="tns:ArrayOfStockSubItem" />
+          <xs:element minOccurs="0" name="NoOfPiecesUsed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectedStockItem" nillable="true" type="tns:StockItem" />
+          <xs:element minOccurs="0" name="SelectedStockSubItem" nillable="true" type="tns:StockSubItem" />
+          <xs:element minOccurs="0" name="StockItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockSubItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockUsageId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockUsageModel" nillable="true" type="tns:StockUsageModel" />
+</xs:schema>

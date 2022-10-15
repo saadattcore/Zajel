@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.SystemManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs.SystemManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" />
+  <xs:import schemaLocation="http://94.56.40.10:7778/Z360Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SystemManagementInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q1:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementInitRequestDto" nillable="true" type="tns:SystemManagementInitRequestDto" />
+  <xs:complexType name="SystemManagementInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q2:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeliveryModesList" nillable="true" type="q3:ArrayOfstring" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeliveryTypesList" nillable="true" type="q4:ArrayOfstring" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MethodsOfPaymentList" nillable="true" type="q5:ArrayOfstring" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProductTypesList" nillable="true" type="q6:ArrayOfstring" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="ServiceDropdown" nillable="true" type="q7:ArrayOfDropdown" />
+          <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ServiceTypesList" nillable="true" type="q8:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementInitResponseDto" nillable="true" type="tns:SystemManagementInitResponseDto" />
+  <xs:complexType name="SystemManagementAddServiceRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q9:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ServiceDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddServiceRequestDto" nillable="true" type="tns:SystemManagementAddServiceRequestDto" />
+  <xs:complexType name="SystemManagementAddServiceResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q10:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ServiceTypesList" nillable="true" type="q11:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddServiceResponseDto" nillable="true" type="tns:SystemManagementAddServiceResponseDto" />
+  <xs:complexType name="SystemManagementAddDeliveryModeRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q12:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeliveryModeValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddDeliveryModeRequestDto" nillable="true" type="tns:SystemManagementAddDeliveryModeRequestDto" />
+  <xs:complexType name="SystemManagementAddDeliveryModeResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q13:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeliveryModesList" nillable="true" type="q14:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddDeliveryModeResponseDto" nillable="true" type="tns:SystemManagementAddDeliveryModeResponseDto" />
+  <xs:complexType name="SystemManagementAddProductRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q15:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddProductRequestDto" nillable="true" type="tns:SystemManagementAddProductRequestDto" />
+  <xs:complexType name="SystemManagementAddProductResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q16:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProductTypesList" nillable="true" type="q17:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddProductResponseDto" nillable="true" type="tns:SystemManagementAddProductResponseDto" />
+  <xs:complexType name="SystemManagementAddDeliveryTypeRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q18:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeliveryDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddDeliveryTypeRequestDto" nillable="true" type="tns:SystemManagementAddDeliveryTypeRequestDto" />
+  <xs:complexType name="SystemManagementAddDeliveryTypeResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q19:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeliveryTypesList" nillable="true" type="q20:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddDeliveryTypeResponseDto" nillable="true" type="tns:SystemManagementAddDeliveryTypeResponseDto" />
+  <xs:complexType name="SystemManagementAddMethodOfPaymentRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q21:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ManualRate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MethodOfPayment" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddMethodOfPaymentRequestDto" nillable="true" type="tns:SystemManagementAddMethodOfPaymentRequestDto" />
+  <xs:complexType name="SystemManagementAddMethodOfPaymentResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q22:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MethodsOfPaymentList" nillable="true" type="q23:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemManagementAddMethodOfPaymentResponseDto" nillable="true" type="tns:SystemManagementAddMethodOfPaymentResponseDto" />
+  <xs:complexType name="CountryAndCityInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q24:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityInitRequestDto" nillable="true" type="tns:CountryAndCityInitRequestDto" />
+  <xs:complexType name="CountryAndCityInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q25:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountryList" nillable="true" type="q26:ArrayOfCountries" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityInitResponseDto" nillable="true" type="tns:CountryAndCityInitResponseDto" />
+  <xs:complexType name="CountryAndCityLoadCitiesRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q27:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityLoadCitiesRequestDto" nillable="true" type="tns:CountryAndCityLoadCitiesRequestDto" />
+  <xs:complexType name="CountryAndCityLoadCitiesResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q28:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CityList" nillable="true" type="q29:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityLoadCitiesResponseDto" nillable="true" type="tns:CountryAndCityLoadCitiesResponseDto" />
+  <xs:complexType name="CountryAndCityAddCountryRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q30:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityAddCountryRequestDto" nillable="true" type="tns:CountryAndCityAddCountryRequestDto" />
+  <xs:complexType name="CountryAndCityAddCountryResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q31:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CountryList" nillable="true" type="q32:ArrayOfCountries" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityAddCountryResponseDto" nillable="true" type="tns:CountryAndCityAddCountryResponseDto" />
+  <xs:complexType name="CountryAndCityAddCityRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q33:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityZone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityAddCityRequestDto" nillable="true" type="tns:CountryAndCityAddCityRequestDto" />
+  <xs:complexType name="CountryAndCityAddCityResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q34:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CityList" nillable="true" type="q35:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryAndCityAddCityResponseDto" nillable="true" type="tns:CountryAndCityAddCityResponseDto" />
+  <xs:complexType name="RouteAndCourierInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q36:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierInitRequestDto" nillable="true" type="tns:RouteAndCourierInitRequestDto" />
+  <xs:complexType name="RouteAndCourierInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q37:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="RoutesList" nillable="true" type="q38:ArrayOfRoutes" />
+          <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="Usernames" nillable="true" type="q39:ArrayOfUsers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierInitResponseDto" nillable="true" type="tns:RouteAndCourierInitResponseDto" />
+  <xs:complexType name="RouteAndCourierLoadCouriersRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q40:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RouteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierLoadCouriersRequestDto" nillable="true" type="tns:RouteAndCourierLoadCouriersRequestDto" />
+  <xs:complexType name="RouteAndCourierLoadCouriersResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q41:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q42:ArrayOfCouriers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierLoadCouriersResponseDto" nillable="true" type="tns:RouteAndCourierLoadCouriersResponseDto" />
+  <xs:complexType name="RouteAndCourierAddRouteRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q43:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RouteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierAddRouteRequestDto" nillable="true" type="tns:RouteAndCourierAddRouteRequestDto" />
+  <xs:complexType name="RouteAndCourierAddRouteResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q44:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="RoutesList" nillable="true" type="q45:ArrayOfRoutes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierAddRouteResponseDto" nillable="true" type="tns:RouteAndCourierAddRouteResponseDto" />
+  <xs:complexType name="RouteAndCourierAddCourierRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q46:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierRouteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierUserId" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierAddCourierRequestDto" nillable="true" type="tns:RouteAndCourierAddCourierRequestDto" />
+  <xs:complexType name="RouteAndCourierAddCourierResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q47:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q48:ArrayOfCouriers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierAddCourierResponseDto" nillable="true" type="tns:RouteAndCourierAddCourierResponseDto" />
+  <xs:complexType name="RouteAndCourierUpdateCourierRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q49:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CourierContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierRouteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourierUserId" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierUpdateCourierRequestDto" nillable="true" type="tns:RouteAndCourierUpdateCourierRequestDto" />
+  <xs:complexType name="RouteAndCourierUpdateCourierResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q50:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="CouriersList" nillable="true" type="q51:ArrayOfCouriers" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierUpdateCourierResponseDto" nillable="true" type="tns:RouteAndCourierUpdateCourierResponseDto" />
+  <xs:complexType name="RouteAndCourierUpdateRouteRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q52="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q52:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RouteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RouteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierUpdateRouteRequestDto" nillable="true" type="tns:RouteAndCourierUpdateRouteRequestDto" />
+  <xs:complexType name="RouteAndCourierUpdateRouteResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q53:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="RoutesList" nillable="true" type="q54:ArrayOfRoutes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RouteAndCourierUpdateRouteResponseDto" nillable="true" type="tns:RouteAndCourierUpdateRouteResponseDto" />
+  <xs:complexType name="AirwayBillStatusesInitRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q55="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q55:BaseRequestDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AirwayBillStatusesInitRequestDto" nillable="true" type="tns:AirwayBillStatusesInitRequestDto" />
+  <xs:complexType name="AirwayBillStatusesInitResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q56:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="StatusesList" nillable="true" type="q57:ArrayOfStatuses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AirwayBillStatusesInitResponseDto" nillable="true" type="tns:AirwayBillStatusesInitResponseDto" />
+  <xs:complexType name="AWBLoadStatusRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q58="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q58:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBLoadStatusRequestDto" nillable="true" type="tns:AWBLoadStatusRequestDto" />
+  <xs:complexType name="AWBLoadStatusResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q59="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q59:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AllowedStatuses" nillable="true" type="q60:ArrayOfStatuses" />
+          <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailableStatuses" nillable="true" type="q61:ArrayOfStatuses" />
+          <xs:element minOccurs="0" name="IsClosingStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBLoadStatusResponseDto" nillable="true" type="tns:AWBLoadStatusResponseDto" />
+  <xs:complexType name="AWBAddStatusRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q62="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q62:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusToAdd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBAddStatusRequestDto" nillable="true" type="tns:AWBAddStatusRequestDto" />
+  <xs:complexType name="AWBAddStatusResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q63="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q63:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AllowedStatuses" nillable="true" type="q64:ArrayOfStatuses" />
+          <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailableStatuses" nillable="true" type="q65:ArrayOfStatuses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBAddStatusResponseDto" nillable="true" type="tns:AWBAddStatusResponseDto" />
+  <xs:complexType name="AWBRemoveStatusRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q66="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q66:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusToRemove" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBRemoveStatusRequestDto" nillable="true" type="tns:AWBRemoveStatusRequestDto" />
+  <xs:complexType name="AWBRemoveStatusResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q67="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q67:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AllowedStatuses" nillable="true" type="q68:ArrayOfStatuses" />
+          <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailableStatuses" nillable="true" type="q69:ArrayOfStatuses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBRemoveStatusResponseDto" nillable="true" type="tns:AWBRemoveStatusResponseDto" />
+  <xs:complexType name="AWBClosingStatusRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q70="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q70:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsClosingStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBClosingStatusRequestDto" nillable="true" type="tns:AWBClosingStatusRequestDto" />
+  <xs:complexType name="AWBClosingStatusResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q71="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q71:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AllowedStatuses" nillable="true" type="q72:ArrayOfStatuses" />
+          <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="AvailableStatuses" nillable="true" type="q73:ArrayOfStatuses" />
+          <xs:element minOccurs="0" name="IsClosingStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBClosingStatusResponseDto" nillable="true" type="tns:AWBClosingStatusResponseDto" />
+  <xs:complexType name="AWBAddNewStatusRequestDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q74="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q74:BaseRequestDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsClosingStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusDesc" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBAddNewStatusRequestDto" nillable="true" type="tns:AWBAddNewStatusRequestDto" />
+  <xs:complexType name="AWBAddNewStatusResponseDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q75="http://schemas.datacontract.org/2004/07/Z360.Common.DTOs" base="q75:BaseResponseDto">
+        <xs:sequence>
+          <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Z360.Common.Model.Generic" minOccurs="0" name="StatusesList" nillable="true" type="q76:ArrayOfStatuses" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AWBAddNewStatusResponseDto" nillable="true" type="tns:AWBAddNewStatusResponseDto" />
+</xs:schema>

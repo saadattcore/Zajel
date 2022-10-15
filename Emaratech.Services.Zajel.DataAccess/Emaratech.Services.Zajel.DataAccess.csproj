@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9210060C-4868-4CC6-BFFB-2F2862678B19}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emaratech.Services.Zajel.DataAccess</RootNamespace>
+    <AssemblyName>Emaratech.Services.Zajel.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.DatabaseLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.DatabaseLayer.1.0.26\lib\net461\Emaratech.DatabaseLayer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.Ado, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.Ado.2.0.11\lib\net461\Emaratech.Services.Ado.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.Api.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.Api.Client.1.0.14\lib\net461\Emaratech.Services.Api.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.Application, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.Application.1.0.339\lib\net461\Emaratech.Services.Application.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.Common.1.0.19\lib\net461\Emaratech.Services.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.HealthCheck.Ado, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.HealthCheck.Ado.1.0.9\lib\net461\Emaratech.Services.HealthCheck.Ado.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.HealthCheck.EF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.HealthCheck.EF.1.0.5\lib\net461\Emaratech.Services.HealthCheck.EF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.Systems, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.Systems.1.0.80\lib\net461\Emaratech.Services.Systems.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.WcfCommons.Cors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.WcfCommons.Cors.1.0.10\lib\net461\Emaratech.Services.WcfCommons.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.WcfCommons.Dynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.WcfCommons.Dynamic.1.0.14\lib\net461\Emaratech.Services.WcfCommons.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.WcfCommons.Faults, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.WcfCommons.Faults.1.0.23\lib\net461\Emaratech.Services.WcfCommons.Faults.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Services.WcfCommons.HealthCheck, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Services.WcfCommons.HealthCheck.1.0.10\lib\net461\Emaratech.Services.WcfCommons.HealthCheck.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emaratech.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emaratech.Utilities.1.0.8\lib\net461\Emaratech.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImpromptuInterface, Version=6.2.2.0, Culture=neutral, PublicKeyToken=0b1781c923b2975b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImpromptuInterface.6.2.2\lib\net40\ImpromptuInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.2.1.0\lib\net45-full\Ninject.Extensions.Factory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Wcf, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.3.2.2.0\lib\net45-full\Ninject.Extensions.Wcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SwaggerWcf, Version=0.1.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SwaggerWcf.1.0.9\lib\net45\SwaggerWcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\EmaratechDev.pubxml" />
+    <None Include="Service References\ZajelServiceExternal\configuration91.svcinfo" />
+    <None Include="Service References\ZajelServiceExternal\configuration.svcinfo" />
+    <Content Include="Global.asax" />
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddDomesticRatesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddDomesticRatesLoadResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddDomesticRatesSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddInternationalRatesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddModifyStockCategoryResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddModifyStockItemResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddModifyStockSubItemResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddModifyVendorResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddNewNotificationResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookCreateAddressResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookDeleteAddressResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookLoadCitiesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookModifyAddressResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AddressBookSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillAllocationsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillAllocationsStatusUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillStatusDetailsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillStatusesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AirwayBillStatusUpdateSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AllocationReportResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AttachProofOfDeliveryResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AutoAllocationInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AWBAddNewStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AWBAddStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AWBClosingStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AWBLoadStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.AWBRemoveStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BookingInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BookingSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BookingStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BulkManifestLoadBatchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BulkManifestSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BulkPrePrintInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.BWShipmentsCountResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CalculateRateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CancelBookingResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CCReportsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ClientManagementInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ClientManagementSearchInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMCreateBranchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMCreateClientResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMCreateDepartmentResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMModifyBranchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMModifyClientResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMModifyDepartmentResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMSearchBranchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMSearchClientResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CMSearchDepartmentResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsCreateComplaintResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsGetResponsesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsModifyComplaintResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsResponseComplaintInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsResponseComplaintResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsSearchComplaintResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsTrackComplaintByAWBResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsTrackComplaintByCallerNumberResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ComplaintsTrackComplaintResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CountryAndCityAddCityResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CountryAndCityAddCountryResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CountryAndCityInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CountryAndCityLoadCitiesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CustomerAddressUpdate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CustomerAddressUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.CustomerAddressUpdateSendSMSResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsByCourierResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsCreateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsGetManifestResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DeliverySheetsUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DepartmentWiseReportInitDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DubaiCustomsManifestByDateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.DubaiCustomsManifestSaveAllocationResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.EmailSubscriptionAddStatusResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.EmailSubscriptionGetSubscriptionsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.EmailSubscriptionInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.EmailSubscriptionManageSubscriptionResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.EmailSubscriptionStatusCodesListResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.FindBookingsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetAccountResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetAirwayBillDataByDateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetAllAccountsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetAllNotificationsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetAllocatedBookingsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetBookingsInDateRangeResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetCountriesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetCouriersResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetDeliveredShipmentResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetDeliveredShipmentsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetNotificationsByClientIDResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetServiceTypesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.GetShipmentsByParametersResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.InternationalRatesLoadResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.InternationalRatesModifyResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.InternationalRatesSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.InternationalRatesUploadResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.LoginAuthenticationResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.LoginCreatePrincipalResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManageBookingsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManageBookingsSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManageShipmentsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestAllocationInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestEditResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestLoadAirwayBillResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestLoadBookingResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestRegisterInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestSaveAllocationResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManifestSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManualCostCalculationGetAirwayBillDetailsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ManualCostCalculationSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ModifyDomesticRatesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.PickupSheetInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.PrintedAirwayBillSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ProcessSalesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ProcessSalesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.QuickManifestInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.QuickManifestSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ReportsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierAddCourierResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierAddRouteResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierLoadCouriersResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierUpdateCourierResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.RouteAndCourierUpdateRouteResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SearchAndLoadAddressResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ShipmentAddressUpdatesNotificationResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ShipmentTasksInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ShipmentUpdatesAddUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ShipmentUpdatesGetComplaintsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ShipmentUpdatesGetUpdatesResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StatusesCountResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StatusUpdateInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StatusUpdateSearchDeliverySheetResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockDetailsByBarCodeResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockDetailsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockDetailsSaveModifyResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockDetailsSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockManagementResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockManagementSetupsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockUsageInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockUsageSaveModifyResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.StockUsageSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementAddDeliveryModeResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementAddDeliveryTypeResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementAddMethodOfPaymentResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementAddProductResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementAddServiceResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.SystemManagementInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.TrackingByAirwayBillResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.TrackingByOtherParametersResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.TrackingGetComplaintsCountResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.TrackingGetUpdatesCountResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.TrackingStatusHistoryResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UploadDomesticRatesSaveResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementAddPermissionResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementAddUserResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementChangePasswordResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementCheckAvailabilityResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementGetAvailablePermissionsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementGetPermissionsByRoleResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.UserManagementRemovePermissionResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewAllocatedBookingsDetailsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewAllocatedBookingsInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewDomesticRatesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewDomesticRatesSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewInternationalRatesInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ViewInternationalRatesSearchResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionApplicationUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionBulkManifestResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionPickupDoneResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionResponceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionTrackingResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.VisionVerifyApplicationIdsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.WebTracking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ZtroneSyncItemresponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ZTronLoginInitResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ZTronLoginResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ZajelServiceExternal\Emaratech.Services.Zajel.DataAccess.ZajelServiceExternal.ZTronStatusUpdateResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ZajelServiceExternal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ZajelDataAccessService.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\MapperConfigurationUtils.cs" />
+    <Compile Include="App_Start\MapperConfigurator.cs" />
+    <Compile Include="App_Start\ServiceNinjectModule.cs" />
+    <Compile Include="App_Start\UtilsNinjectModule.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ZajelServiceExternal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="src\FakeZajelServiceClient.cs" />
+    <Compile Include="src\IRemoteServicesProxyFactory.cs" />
+    <Compile Include="src\SystemSettings.cs" />
+    <Compile Include="src\VisionDataRequestDTOHelpers.cs" />
+    <Compile Include="src\ZajelServiceHelper.cs" />
+    <Compile Include="ZajelDataAccessService.svc.cs">
+      <DependentUpon>ZajelDataAccessService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Service References\ZajelServiceExternal\Z360Service.wsdl" />
+    <None Include="Service References\ZajelServiceExternal\Z360Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service50.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZajelServiceExternal\Z360Service9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emaratech.Services.Zajel.Common\Emaratech.Services.Zajel.Common.csproj">
+      <Project>{29d25aff-f93f-46db-abc7-b5e266b4274a}</Project>
+      <Name>Emaratech.Services.Zajel.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emaratech.Services.Zajel.Contracts\Emaratech.Services.Zajel.Contracts.csproj">
+      <Project>{dbf4562d-9fa5-4b21-9269-762e9cf9a489}</Project>
+      <Name>Emaratech.Services.Zajel.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emaratech.Services.Zajel.Entities\Emaratech.Services.Zajel.Entities.csproj">
+      <Project>{6ac16346-17bd-4f65-9c41-2f940820f007}</Project>
+      <Name>Emaratech.Services.Zajel.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ZajelServiceExternal\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EmaratechDev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10094</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Emaratech.Services.Zajel.DataAccess</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
